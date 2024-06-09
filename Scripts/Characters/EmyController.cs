@@ -87,6 +87,7 @@ public partial class EmyController : CharacterBody3D
 			GD.Print("secondary attack is pressed");
 		}
 
+		// Check if the heading of the character change and fire the signal to rotate its model when the heading change
 		if (_lastHeadingDirection == _currentHeadingDirection)
 		{
 			return;
@@ -101,14 +102,12 @@ public partial class EmyController : CharacterBody3D
 
     public override void _PhysicsProcess(double delta)
     {
+		// Apply gravity to the player
 		if (!IsOnFloor())
 		{
 			_velocity.Y += GRAVITY * (float)delta;
 		}
-		// _velocity = new Vector3(0.0f, 0.0f, (int)_inputDirection * _speed * (float)delta);
 		_velocity.Z = (int)_inputDirection * _speed * (float)delta;
-		// GD.Print(_velocity);
-		
 		
 		Velocity = _velocity;
 		
@@ -117,6 +116,9 @@ public partial class EmyController : CharacterBody3D
     }
 
 
+	/// <summary>
+	/// Apply jump vector to the velocity vector
+	/// </summary>
 	private void Jump()
 	{
 		if (!IsOnFloor())
@@ -129,6 +131,10 @@ public partial class EmyController : CharacterBody3D
 	}
 
 
+	/// <summary>
+	/// Rotate the character when changing direction
+	/// </summary>
+	/// <returns></returns>
 	private async void RotateCharacter()
 	{
 		Vector3 currentRotationDegress = Pivot.RotationDegrees;
