@@ -1,6 +1,8 @@
 using Godot;
 using Portal2_5D.Scripts.Helper;
 using System;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Unicode;
 
 namespace Portal2_5D.Scripts.Characters;
 public partial class EmyController : CharacterBody3D
@@ -86,6 +88,8 @@ public partial class EmyController : CharacterBody3D
 		{
 			GD.Print("secondary attack is pressed");
 		}
+
+		Input.SetCustomMouseCursor(null, Input.CursorShape.PointingHand);
 
 		// Check if the heading of the character change and fire the signal to rotate its model when the heading change
 		if (_lastHeadingDirection == _currentHeadingDirection)

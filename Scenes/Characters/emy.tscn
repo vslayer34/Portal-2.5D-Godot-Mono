@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dxpkta83txyqn"]
+[gd_scene load_steps=9 format=3 uid="uid://dxpkta83txyqn"]
 
 [ext_resource type="Script" path="res://Scripts/Characters/EmyController.cs" id="1_h0u17"]
 [ext_resource type="PackedScene" uid="uid://cu6b14cb67ab" path="res://Assets/Characters/Rose/Rose.glb" id="1_xldho"]
+[ext_resource type="PackedScene" uid="uid://dt37dq5uact7m" path="res://Scenes/Objects/portal_gun.tscn" id="3_ks0a5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0f6ff"]
 albedo_color = Color(0.765625, 0.128601, 0.450995, 1)
@@ -37,6 +38,11 @@ skeleton = NodePath("../..")
 [node name="Glasses" type="MeshInstance3D" parent="Pivot/Body"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.461472, 0.423927)
 mesh = SubResource("BoxMesh_qw0oa")
+
+[node name="WeaponHandle" type="Node3D" parent="Pivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.517277, 0.792858, 0.902531)
+
+[node name="Portal Gun" parent="Pivot/WeaponHandle" instance=ExtResource("3_ks0a5")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://dt37dq5uact7m"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iohbf"]
+albedo_color = Color(0.30307, 0.0573578, 0.699219, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_imai5"]
+material = SubResource("StandardMaterial3D_iohbf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qlr5n"]
+albedo_color = Color(0, 0.976562, 1, 1)
+
+[sub_resource type="PrismMesh" id="PrismMesh_mbfxm"]
+material = SubResource("StandardMaterial3D_qlr5n")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pfddx"]
+albedo_color = Color(0.0856934, 0.914062, 0.137466, 1)
+
+[sub_resource type="PrismMesh" id="PrismMesh_gv7gf"]
+material = SubResource("StandardMaterial3D_pfddx")
+
+[node name="Portal Gun" type="Node3D"]
+
+[node name="Main Body" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.254093, 0, 0, 0, -2.18557e-08, -0.25, 0, 0.5, -1.09278e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_imai5")
+
+[node name="Main Body2" type="MeshInstance3D" parent="Main Body"]
+transform = Transform3D(1, 0, 0, 0, 0.147662, 0.491986, 0, -0.497161, 0.146125, 0, -0.791774, 0.604732)
+mesh = SubResource("CylinderMesh_imai5")
+skeleton = NodePath("../..")
+
+[node name="Upper Lib" type="MeshInstance3D" parent="Main Body"]
+transform = Transform3D(-1.7981e-08, -8.99048e-09, -0.411357, 8.99049e-09, 0.411357, -8.99048e-09, 0.411357, -8.99052e-09, -1.7981e-08, -0.0176708, 1.06662, -0.440584)
+mesh = SubResource("PrismMesh_mbfxm")
+
+[node name="Lower Lib" type="MeshInstance3D" parent="Main Body"]
+transform = Transform3D(-1.7981e-08, -8.99048e-09, -0.411357, 8.99049e-09, 0.411357, -8.99048e-09, 0.411357, -8.99053e-09, -1.7981e-08, -0.018, 1.067, 0.441)
+mesh = SubResource("PrismMesh_mbfxm")
+
+[node name="Left Lib" type="MeshInstance3D" parent="Main Body"]
+transform = Transform3D(-0.411356, 3.58287e-14, 3.59619e-08, 8.09581e-15, 0.411356, -1.7981e-08, -3.59619e-08, -1.7981e-08, -0.411356, 0.415856, 1.06662, 0.000375255)
+mesh = SubResource("PrismMesh_gv7gf")
+
+[node name="Right Lib" type="MeshInstance3D" parent="Main Body"]
+transform = Transform3D(-0.411356, 4.45674e-14, 3.59619e-08, 1.16485e-14, 0.411356, -1.7981e-08, -3.59619e-08, -1.7981e-08, -0.411356, -0.451527, 1.067, 4.05993e-05)
+mesh = SubResource("PrismMesh_gv7gf")
