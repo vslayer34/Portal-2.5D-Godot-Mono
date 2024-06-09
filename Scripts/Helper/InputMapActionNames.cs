@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PortalD2.D.Scripts.Helper;
+namespace Portal2_5D.Scripts.Helper;
 /// <summary>
 /// Contains reference to input map action names
 /// </summary>

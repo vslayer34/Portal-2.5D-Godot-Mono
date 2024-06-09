@@ -8,6 +8,6 @@
 [node name="Emy" parent="." instance=ExtResource("1_egwbq")]
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.8251, 2.72446, -0.417534)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -7.825, 2.724, -0.418)
 
 [node name="Test Level" parent="." instance=ExtResource("2_w4rqj")]
