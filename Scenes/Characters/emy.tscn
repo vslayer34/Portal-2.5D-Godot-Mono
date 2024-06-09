@@ -18,10 +18,11 @@ size = Vector3(0.5, 0.3, 0.3)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_et5l4"]
 
-[node name="Emy" type="CharacterBody3D"]
+[node name="Emy" type="CharacterBody3D" node_paths=PackedStringArray("Pivot")]
 script = ExtResource("1_h0u17")
+Pivot = NodePath("Pivot")
 _speed = 250.0
-_jumpForce = 7.0
+_jumpForce = 8.0
 
 [node name="Rose" parent="." instance=ExtResource("1_xldho")]
 visible = false
