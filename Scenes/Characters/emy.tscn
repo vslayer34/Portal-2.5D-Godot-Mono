@@ -1,3 +1,38 @@
-[gd_scene format=3 uid="uid://dxpkta83txyqn"]
+[gd_scene load_steps=7 format=3 uid="uid://dxpkta83txyqn"]
+
+[ext_resource type="PackedScene" uid="uid://cu6b14cb67ab" path="res://Assets/Characters/Rose/Rose.glb" id="1_xldho"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0f6ff"]
+albedo_color = Color(0.765625, 0.128601, 0.450995, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_1imdm"]
+material = SubResource("StandardMaterial3D_0f6ff")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7y0w3"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qw0oa"]
+material = SubResource("StandardMaterial3D_7y0w3")
+size = Vector3(0.5, 0.3, 0.3)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_et5l4"]
 
 [node name="Emy" type="CharacterBody3D"]
+
+[node name="Rose" parent="." instance=ExtResource("1_xldho")]
+visible = false
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="Body" type="MeshInstance3D" parent="Pivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_1imdm")
+skeleton = NodePath("../..")
+
+[node name="Glasses" type="MeshInstance3D" parent="Pivot/Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.461472, 0.423927)
+mesh = SubResource("BoxMesh_qw0oa")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_et5l4")

@@ -1,3 +1,13 @@
-[gd_scene format=3 uid="uid://b0vsbyx8cj0tu"]
+[gd_scene load_steps=3 format=3 uid="uid://b0vsbyx8cj0tu"]
+
+[ext_resource type="PackedScene" uid="uid://dxpkta83txyqn" path="res://Scenes/Characters/emy.tscn" id="1_egwbq"]
+[ext_resource type="PackedScene" uid="uid://da7sb0r7ipxr2" path="res://Scenes/Levels/test_level.tscn" id="2_w4rqj"]
 
 [node name="Main" type="Node3D"]
+
+[node name="Emy" parent="." instance=ExtResource("1_egwbq")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.8251, 2.72446, -0.417534)
+
+[node name="Test Level" parent="." instance=ExtResource("2_w4rqj")]
