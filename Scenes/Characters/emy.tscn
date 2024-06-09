@@ -19,9 +19,11 @@ size = Vector3(0.5, 0.3, 0.3)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_et5l4"]
 
-[node name="Emy" type="CharacterBody3D" node_paths=PackedStringArray("Pivot")]
+[node name="Emy" type="CharacterBody3D" node_paths=PackedStringArray("Pivot", "WeaponHoldPoint", "PortalGun")]
 script = ExtResource("1_h0u17")
 Pivot = NodePath("Pivot")
+WeaponHoldPoint = NodePath("Pivot/WeaponHandle")
+PortalGun = NodePath("Pivot/WeaponHandle/Portal Gun")
 _speed = 250.0
 _jumpForce = 8.0
 
@@ -40,9 +42,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.461472, 0.423927)
 mesh = SubResource("BoxMesh_qw0oa")
 
 [node name="WeaponHandle" type="Node3D" parent="Pivot"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.517277, 0.792858, 0.902531)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.517277, 1.15734, 0.182441)
 
 [node name="Portal Gun" parent="Pivot/WeaponHandle" instance=ExtResource("3_ks0a5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.636706)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

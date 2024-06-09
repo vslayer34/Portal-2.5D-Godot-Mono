@@ -29,6 +29,12 @@ public partial class EmyController : CharacterBody3D
 	[ExportGroup("Required Nodes")]
 	[Export]
 	public Node3D Pivot { get; private set; }
+
+	[Export]
+	public Node3D WeaponHoldPoint { get; private set; }
+
+	[Export]
+	public PortalGun PortalGun { get; private set; }
 	[ExportGroup("")]
 
 

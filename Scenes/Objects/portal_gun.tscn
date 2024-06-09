@@ -1,4 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://dt37dq5uact7m"]
+[gd_scene load_steps=8 format=3 uid="uid://dt37dq5uact7m"]
+
+[ext_resource type="Script" path="res://Scripts/Objects/PortalGun.cs" id="1_mo412"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iohbf"]
 albedo_color = Color(0.30307, 0.0573578, 0.699219, 1)
@@ -19,6 +21,7 @@ albedo_color = Color(0.0856934, 0.914062, 0.137466, 1)
 material = SubResource("StandardMaterial3D_pfddx")
 
 [node name="Portal Gun" type="Node3D"]
+script = ExtResource("1_mo412")
 
 [node name="Main Body" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.254093, 0, 0, 0, -2.18557e-08, -0.25, 0, 0.5, -1.09278e-08, 0, 0, 0)
@@ -29,18 +32,24 @@ transform = Transform3D(1, 0, 0, 0, 0.147662, 0.491986, 0, -0.497161, 0.146125, 
 mesh = SubResource("CylinderMesh_imai5")
 skeleton = NodePath("../..")
 
-[node name="Upper Lib" type="MeshInstance3D" parent="Main Body"]
-transform = Transform3D(-1.7981e-08, -8.99048e-09, -0.411357, 8.99049e-09, 0.411357, -8.99048e-09, 0.411357, -8.99052e-09, -1.7981e-08, -0.0176708, 1.06662, -0.440584)
+[node name="Barrel" type="Node" parent="Main Body/Main Body2"]
+
+[node name="Upper Lib" type="MeshInstance3D" parent="Main Body/Main Body2/Barrel"]
+transform = Transform3D(-4.56884e-09, -2.28442e-09, -0.104523, -0.102839, -6.74285e-09, 4.49524e-09, 4.44089e-15, 0.205678, -4.49524e-09, -0.00449002, 0.110146, 0.533312)
 mesh = SubResource("PrismMesh_mbfxm")
+skeleton = NodePath("../../..")
 
-[node name="Lower Lib" type="MeshInstance3D" parent="Main Body"]
-transform = Transform3D(-1.7981e-08, -8.99048e-09, -0.411357, 8.99049e-09, 0.411357, -8.99048e-09, 0.411357, -8.99053e-09, -1.7981e-08, -0.018, 1.067, 0.441)
+[node name="Lower Lib" type="MeshInstance3D" parent="Main Body/Main Body2/Barrel"]
+transform = Transform3D(-4.56884e-09, -2.28442e-09, -0.104523, -0.102839, -6.74285e-09, 4.49524e-09, 5.32907e-15, 0.205678, -4.49524e-09, -0.00457367, -0.11025, 0.5335)
 mesh = SubResource("PrismMesh_mbfxm")
+skeleton = NodePath("../../..")
 
-[node name="Left Lib" type="MeshInstance3D" parent="Main Body"]
-transform = Transform3D(-0.411356, 3.58287e-14, 3.59619e-08, 8.09581e-15, 0.411356, -1.7981e-08, -3.59619e-08, -1.7981e-08, -0.411356, 0.415856, 1.06662, 0.000375255)
+[node name="Left Lib" type="MeshInstance3D" parent="Main Body/Main Body2/Barrel"]
+transform = Transform3D(-0.104523, 9.10383e-15, 9.13767e-09, 8.99049e-09, -4.49524e-09, 0.102839, 4.44089e-15, 0.205678, -4.49524e-09, 0.105666, -9.3837e-05, 0.533312)
 mesh = SubResource("PrismMesh_gv7gf")
+skeleton = NodePath("../../..")
 
-[node name="Right Lib" type="MeshInstance3D" parent="Main Body"]
-transform = Transform3D(-0.411356, 4.45674e-14, 3.59619e-08, 1.16485e-14, 0.411356, -1.7981e-08, -3.59619e-08, -1.7981e-08, -0.411356, -0.451527, 1.067, 4.05993e-05)
+[node name="Right Lib" type="MeshInstance3D" parent="Main Body/Main Body2/Barrel"]
+transform = Transform3D(-0.104523, 1.13243e-14, 9.13767e-09, 8.99049e-09, -4.49524e-09, 0.102839, 6.21725e-15, 0.205678, -4.49524e-09, -0.11473, -1.01731e-05, 0.5335)
 mesh = SubResource("PrismMesh_gv7gf")
+skeleton = NodePath("../../..")
