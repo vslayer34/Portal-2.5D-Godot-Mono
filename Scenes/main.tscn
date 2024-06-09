@@ -9,5 +9,6 @@
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -7.825, 2.724, -0.418)
+far = 500.0
 
 [node name="Test Level" parent="." instance=ExtResource("2_w4rqj")]

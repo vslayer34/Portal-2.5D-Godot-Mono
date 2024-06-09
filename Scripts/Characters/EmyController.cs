@@ -40,6 +40,6 @@ public partial class EmyController : CharacterBody3D
 
     public override void _Process(double delta)
     {
-        GD.Print($"Current input vector {_inputVector}");
+        
     }
 }
