@@ -126,8 +126,6 @@ public partial class EmyController : CharacterBody3D
 			return;
 		}
 		_velocity.Y = _jumpForce * 1;
-		// GD.Print(_movementDirection);
-		// GD.Print(Velocity);
 	}
 
 
