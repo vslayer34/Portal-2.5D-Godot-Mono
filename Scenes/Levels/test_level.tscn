@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://da7sb0r7ipxr2"]
+[gd_scene load_steps=7 format=3 uid="uid://da7sb0r7ipxr2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ywy7u"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -20,6 +20,9 @@ albedo_color = Color(0.0625496, 0.296875, 0.013916, 1)
 material = SubResource("StandardMaterial3D_t857d")
 size = Vector3(4, 4, 30)
 
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_fbfxa"]
+points = PackedVector3Array(-2.2381, -2.2381, -15.2381, 2, 2, 14.8995, 2.04762, -2.2381, 15.2381, -2.2381, 2.04762, 15.2381, 2, 2, -14.8995, -2.2381, -2.2381, 15.2381, 2.04762, -2.2381, -15.2381, -2.2381, 2.04762, -15.2381)
+
 [node name="Test Level" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -31,6 +34,13 @@ shadow_enabled = true
 
 [node name="Floor" type="Node" parent="."]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Floor"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
 mesh = SubResource("BoxMesh_tnsdn")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+shape = SubResource("ConvexPolygonShape3D_fbfxa")
