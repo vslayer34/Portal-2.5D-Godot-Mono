@@ -1,2 +1,5 @@
 # Godot 4+ specific ignores
 .godot/
+Builds/data_Portal D2.5D_linuxbsd_x86_64/WindowsBase.dll
+./Builds
+*.pck
