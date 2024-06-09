@@ -5,20 +5,34 @@ using System;
 namespace Portal2_5D.Scripts.Characters;
 public partial class EmyController : CharacterBody3D
 {
-	private Vector3 _inputVector;
+	enum MovementDirection
+	{
+		None = 0,
+		Right = 1,
+		Left = -1
+	}
+	
+
+	[ExportCategory("Character Properties")]
+	[Export]
+	private float _speed = 10.0f;
+
+
+	private MovementDirection _inputDirection;
+	private Vector3 _movementDirection;
 
     public override void _Input(InputEvent @event)
     {
-		_inputVector = Vector3.Zero;
+		_inputDirection = MovementDirection.None;
 
         if (@Input.IsActionPressed(InputMapActionNames.MOVE_RIGHT))
 		{
-			_inputVector.Z = 1;
+			_inputDirection = MovementDirection.Right;
 		}
 
 		if (@Input.IsActionPressed(InputMapActionNames.MOVE_LEFT))
 		{
-			_inputVector.Z = -1;
+			_inputDirection = MovementDirection.Left;
 		}
 
 		if (Input.IsActionJustPressed(InputMapActionNames.JUMP))
@@ -38,8 +52,11 @@ public partial class EmyController : CharacterBody3D
     }
 
 
-    public override void _Process(double delta)
+    public override void _PhysicsProcess(double delta)
     {
-        
+		_movementDirection = new Vector3(0.0f, Velocity.Y, (int)_inputDirection * _speed * (float)delta);
+		Velocity = _movementDirection;
+
+        MoveAndSlide();
     }
 }

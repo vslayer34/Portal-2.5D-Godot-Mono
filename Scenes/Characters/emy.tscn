@@ -20,6 +20,7 @@ size = Vector3(0.5, 0.3, 0.3)
 
 [node name="Emy" type="CharacterBody3D"]
 script = ExtResource("1_h0u17")
+_speed = 250.0
 
 [node name="Rose" parent="." instance=ExtResource("1_xldho")]
 visible = false
