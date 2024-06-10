@@ -116,7 +116,9 @@ public partial class EmyController : CharacterBody3D
 
     public override void _PhysicsProcess(double delta)
     {
+		// make th gun follow the curser point Follow the cursor
 		WeaponHoldPoint.LookAt(AimCursor.MouseGlobalPosition, useModelFront: true);
+
 		// Apply gravity to the player
 		if (!IsOnFloor())
 		{

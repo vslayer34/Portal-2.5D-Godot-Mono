@@ -19,6 +19,10 @@ public partial class AimCursor : Node3D
 	public GameSharedResources SharedResources { get; private set; }
 
 	private Vector2 _mouseScreenPosition;
+	private Vector3 _mouseGlobalPosition;
+
+	// The offset so the cursor doesn't go through teh character model
+	private float _cursorOffset;
 
 
 
@@ -26,26 +30,35 @@ public partial class AimCursor : Node3D
 
     public override void _EnterTree()
     {
+		// Hide the mouse cursor and get reference to the camera
 		Input.MouseMode = Input.MouseModeEnum.Hidden;
         Camera = SharedResources.Camera;
     }
 
     public override void _Input(InputEvent @event)
     {
+		// Get the mouse position and converted it to global position in the world
 		if (@event is InputEventMouse eventMouse)
 		{
 			_mouseScreenPosition = eventMouse.GlobalPosition;
 		}
-		
-		// CursorGroup.Position = MouseGlobalPosition;
 
-		Position = Camera.ProjectPosition(_mouseScreenPosition, Camera.Position.Z - 1);
+		_mouseGlobalPosition = Camera.ProjectPosition(_mouseScreenPosition, Camera.Position.Z - _cursorOffset);
 
-		// GD.Print(_mouseScreenPosition);
-		GD.Print(CursorGroup.Position);
+		Position = _mouseGlobalPosition;
     }
 
 	// Getters and Setters-------------------------------------------------------------------------
 
-	public Vector3 MouseGlobalPosition { get => Position; }
+	/// <summary>
+	/// Return the cursor position after removing the offset
+	/// </summary>
+	public Vector3 MouseGlobalPosition
+	{
+		get
+		{
+			_mouseGlobalPosition.Z += _cursorOffset;
+			return _mouseGlobalPosition;
+		}
+	}
 }
