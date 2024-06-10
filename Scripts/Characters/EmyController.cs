@@ -57,6 +57,7 @@ public partial class EmyController : CharacterBody3D
 	private HeadingDirection _currentHeadingDirection = HeadingDirection.Right;
 	private HeadingDirection _lastHeadingDirection;
 	private Vector3 _velocity;
+	private bool _isTurning;
 
 
 
@@ -75,13 +76,13 @@ public partial class EmyController : CharacterBody3D
         if (@Input.IsActionPressed(InputMapActionNames.MOVE_RIGHT))
 		{
 			_inputDirection = MovementDirection.Right;
-			_currentHeadingDirection = HeadingDirection.Right;
+			// _currentHeadingDirection = HeadingDirection.Right;
 		}
 
 		if (@Input.IsActionPressed(InputMapActionNames.MOVE_LEFT))
 		{
 			_inputDirection = MovementDirection.Left;
-			_currentHeadingDirection = HeadingDirection.Left;
+			// _currentHeadingDirection = HeadingDirection.Left;
 		}
 
 		if (Input.IsActionJustPressed(InputMapActionNames.JUMP))
@@ -101,16 +102,30 @@ public partial class EmyController : CharacterBody3D
 
 		Input.SetCustomMouseCursor(null, Input.CursorShape.PointingHand);
 
-		// Check if the heading of the character change and fire the signal to rotate its model when the heading change
-		if (_lastHeadingDirection == _currentHeadingDirection)
+		if (WeaponHoldPoint.Basis.Z.Z >= 0)
 		{
+			_isTurning = false;
+			// _currentHeadingDirection = HeadingDirection.Right;
 			return;
 		}
 		else
 		{
-			_lastHeadingDirection = _currentHeadingDirection;
+			_isTurning = true;
+			_currentHeadingDirection = (_currentHeadingDirection == HeadingDirection.Right) ? HeadingDirection.Left : HeadingDirection.Right;
 			EmitSignal(SignalName.OnChangeDirection);
+
 		}
+
+		// Check if the heading of the character change and fire the signal to rotate its model when the heading change
+		// if (_lastHeadingDirection == _currentHeadingDirection)
+		// {
+		// 	return;
+		// }
+		// else
+		// {
+		// 	_lastHeadingDirection = _currentHeadingDirection;
+		// 	EmitSignal(SignalName.OnChangeDirection);
+		// }
     }
 
 
@@ -118,6 +133,8 @@ public partial class EmyController : CharacterBody3D
     {
 		// make th gun follow the curser point Follow the cursor
 		WeaponHoldPoint.LookAt(AimCursor.MouseGlobalPosition, useModelFront: true);
+		GD.Print(WeaponHoldPoint.Basis.Z.Z);
+		// GD.Print(AimCursor.Basis.Z.Z);
 
 		// Apply gravity to the player
 		if (!IsOnFloor())
@@ -152,6 +169,11 @@ public partial class EmyController : CharacterBody3D
 	/// <returns></returns>
 	private async void RotateCharacter()
 	{
+		if (!_isTurning)
+		{
+			return;
+		}
+
 		Vector3 currentRotationDegress = Pivot.RotationDegrees;
 		float targetRotationAngle = _currentHeadingDirection == HeadingDirection.Right ? 90.0f : -90.0f;
 		
@@ -168,5 +190,6 @@ public partial class EmyController : CharacterBody3D
 		}
 
 		Pivot.RotationDegrees = targetRotation;
+		_isTurning = false;
 	}
 }
