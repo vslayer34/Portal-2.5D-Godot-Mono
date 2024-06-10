@@ -1,8 +1,6 @@
 using Godot;
 using Portal2_5D.Scripts.Helper;
-using System;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Text.Unicode;
+
 
 namespace Portal2_5D.Scripts.Characters;
 public partial class EmyController : CharacterBody3D
@@ -47,6 +45,8 @@ public partial class EmyController : CharacterBody3D
 
 	
 	private const float GRAVITY = -15.0f;
+
+	private Vector2 _mousePosition;
 
 
 	private MovementDirection _inputDirection;

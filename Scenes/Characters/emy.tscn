@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://dxpkta83txyqn"]
+[gd_scene load_steps=10 format=3 uid="uid://dxpkta83txyqn"]
 
 [ext_resource type="Script" path="res://Scripts/Characters/EmyController.cs" id="1_h0u17"]
 [ext_resource type="PackedScene" uid="uid://cu6b14cb67ab" path="res://Assets/Characters/Rose/Rose.glb" id="1_xldho"]
 [ext_resource type="PackedScene" uid="uid://dt37dq5uact7m" path="res://Scenes/Objects/portal_gun.tscn" id="3_ks0a5"]
+[ext_resource type="PackedScene" uid="uid://cekq0mkyh35fk" path="res://Scenes/UI/aim_cursor.tscn" id="4_cgk50"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0f6ff"]
 albedo_color = Color(0.765625, 0.128601, 0.450995, 1)
@@ -50,3 +51,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.636706)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_et5l4")
+
+[node name="Aim Cursor" parent="." instance=ExtResource("4_cgk50")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
