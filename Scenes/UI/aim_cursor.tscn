@@ -3,7 +3,13 @@
 [ext_resource type="Texture2D" uid="uid://b237o2bqup1yh" path="res://icon.svg" id="1_d8d8p"]
 [ext_resource type="Script" path="res://Scripts/UI/AimCursor.cs" id="2_pvmlt"]
 
-[node name="AimCursor" type="Sprite3D" node_paths=PackedStringArray("CursorSprite")]
-texture = ExtResource("1_d8d8p")
+[node name="AimCursor" type="Node3D"]
 script = ExtResource("2_pvmlt")
-CursorSprite = NodePath(".")
+
+[node name="LeftBluePortal" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.2, 0, 0)
+texture = ExtResource("1_d8d8p")
+
+[node name="RightOrangePortal" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.2, 0, 0)
+texture = ExtResource("1_d8d8p")

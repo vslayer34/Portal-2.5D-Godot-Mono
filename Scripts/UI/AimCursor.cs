@@ -2,7 +2,7 @@ using Godot;
 using System;
 
 namespace Portal2_5D.Scripts.UI;
-public partial class AimCursor : Sprite3D
+public partial class AimCursor : Node3D
 {
 	[ExportGroup("Required Nodes")]
 	[Export]
