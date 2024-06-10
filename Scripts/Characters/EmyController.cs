@@ -102,19 +102,6 @@ public partial class EmyController : CharacterBody3D
 
 		Input.SetCustomMouseCursor(null, Input.CursorShape.PointingHand);
 
-		if (WeaponHoldPoint.Basis.Z.Z >= 0)
-		{
-			_isTurning = false;
-			// _currentHeadingDirection = HeadingDirection.Right;
-			return;
-		}
-		else
-		{
-			_isTurning = true;
-			_currentHeadingDirection = (_currentHeadingDirection == HeadingDirection.Right) ? HeadingDirection.Left : HeadingDirection.Right;
-			EmitSignal(SignalName.OnChangeDirection);
-
-		}
 
 		// Check if the heading of the character change and fire the signal to rotate its model when the heading change
 		// if (_lastHeadingDirection == _currentHeadingDirection)
@@ -132,7 +119,11 @@ public partial class EmyController : CharacterBody3D
     public override void _PhysicsProcess(double delta)
     {
 		// make th gun follow the curser point Follow the cursor
-		WeaponHoldPoint.LookAt(AimCursor.MouseGlobalPosition, useModelFront: true);
+		if (!_isTurning)
+		{
+			WeaponHoldPoint.LookAt(AimCursor.MouseGlobalPosition, useModelFront: true);
+		}
+		
 		GD.Print(WeaponHoldPoint.Basis.Z.Z);
 		// GD.Print(AimCursor.Basis.Z.Z);
 
@@ -147,6 +138,20 @@ public partial class EmyController : CharacterBody3D
 		
 
         MoveAndSlide();
+
+		if (WeaponHoldPoint.Basis.Z.Z >= 0)
+		{
+			// _isTurning = false;
+			// _currentHeadingDirection = HeadingDirection.Right;
+			return;
+		}
+		else
+		{
+			// _isTurning = true;
+			_currentHeadingDirection = (_currentHeadingDirection == HeadingDirection.Right) ? HeadingDirection.Left : HeadingDirection.Right;
+			EmitSignal(SignalName.OnChangeDirection);
+
+		}
     }
 
 
@@ -169,21 +174,24 @@ public partial class EmyController : CharacterBody3D
 	/// <returns></returns>
 	private async void RotateCharacter()
 	{
-		if (!_isTurning)
+		if (_isTurning)
 		{
 			return;
 		}
+
+		_isTurning = true;
 
 		Vector3 currentRotationDegress = Pivot.RotationDegrees;
 		float targetRotationAngle = _currentHeadingDirection == HeadingDirection.Right ? 90.0f : -90.0f;
 		
 		Vector3 targetRotation = new Vector3(Pivot.Rotation.X, targetRotationAngle, Pivot.Rotation.Z);
 		float timer = 0.0f;
-		float maxTime = 0.5f;
+		float maxTime = 0.2f;
 
 		while (timer < maxTime)
 		{
 			Pivot.RotationDegrees = currentRotationDegress.Lerp(targetRotation, timer / maxTime);
+			WeaponHoldPoint.LookAt(AimCursor.MouseGlobalPosition, useModelFront: true);
 			timer += (float)GetProcessDeltaTime();
 			
 			await ToSignal(GetTree(), SceneTree.SignalName.ProcessFrame);
