@@ -124,7 +124,7 @@ public partial class EmyController : CharacterBody3D
 			WeaponHoldPoint.LookAt(AimCursor.MouseGlobalPosition, useModelFront: true);
 		}
 		
-		GD.Print(WeaponHoldPoint.Basis.Z.Z);
+		// GD.Print(WeaponHoldPoint.Basis.Z.Z);
 		// GD.Print(AimCursor.Basis.Z.Z);
 
 		// Apply gravity to the player
