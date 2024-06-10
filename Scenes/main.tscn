@@ -1,9 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://b0vsbyx8cj0tu"]
+[gd_scene load_steps=5 format=3 uid="uid://b0vsbyx8cj0tu"]
 
 [ext_resource type="PackedScene" uid="uid://dxpkta83txyqn" path="res://Scenes/Characters/emy.tscn" id="1_egwbq"]
+[ext_resource type="Script" path="res://Scripts/GameManager.cs" id="1_g2qau"]
+[ext_resource type="Resource" uid="uid://cftaccl7w3u1g" path="res://Scripts/Resources/shared_resources.tres" id="2_ep1ny"]
 [ext_resource type="PackedScene" uid="uid://da7sb0r7ipxr2" path="res://Scenes/Levels/test_level.tscn" id="2_w4rqj"]
 
-[node name="Main" type="Node3D"]
+[node name="Main" type="Node3D" node_paths=PackedStringArray("Camera")]
+script = ExtResource("1_g2qau")
+Camera = NodePath("Camera3D")
+SharedResources = ExtResource("2_ep1ny")
 
 [node name="Emy" parent="." instance=ExtResource("1_egwbq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.02758, 0)

@@ -1,15 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://cekq0mkyh35fk"]
+[gd_scene load_steps=4 format=3 uid="uid://cekq0mkyh35fk"]
 
 [ext_resource type="Texture2D" uid="uid://b237o2bqup1yh" path="res://icon.svg" id="1_d8d8p"]
+[ext_resource type="Resource" uid="uid://cftaccl7w3u1g" path="res://Scripts/Resources/shared_resources.tres" id="2_iimga"]
 [ext_resource type="Script" path="res://Scripts/UI/AimCursor.cs" id="2_pvmlt"]
 
-[node name="AimCursor" type="Node3D"]
+[node name="AimCursor" type="Node3D" node_paths=PackedStringArray("CursorGroup")]
 script = ExtResource("2_pvmlt")
+CursorGroup = NodePath("CursorGroup")
+SharedResources = ExtResource("2_iimga")
 
-[node name="LeftBluePortal" type="Sprite3D" parent="."]
+[node name="CursorGroup" type="Node3D" parent="."]
+
+[node name="LeftBluePortal" type="Sprite3D" parent="CursorGroup"]
 transform = Transform3D(0.25, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.2, 0, 0)
 texture = ExtResource("1_d8d8p")
 
-[node name="RightOrangePortal" type="Sprite3D" parent="."]
+[node name="RightOrangePortal" type="Sprite3D" parent="CursorGroup"]
 transform = Transform3D(0.25, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.2, 0, 0)
 texture = ExtResource("1_d8d8p")
