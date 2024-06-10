@@ -117,7 +117,7 @@ public partial class EmyController : CharacterBody3D
 		{
 			_velocity.Y += GRAVITY * (float)delta;
 		}
-		_velocity.Z = (int)_inputDirection * _speed * (float)delta;
+		_velocity.X = (int)_inputDirection * _speed * (float)delta;
 		
 		Velocity = _velocity;
 		
@@ -146,7 +146,7 @@ public partial class EmyController : CharacterBody3D
 	private async void RotateCharacter()
 	{
 		Vector3 currentRotationDegress = Pivot.RotationDegrees;
-		float targetRotationAngle = _currentHeadingDirection == HeadingDirection.Right ? 0.0f : -180.0f;
+		float targetRotationAngle = _currentHeadingDirection == HeadingDirection.Right ? 90.0f : -90.0f;
 		
 		Vector3 targetRotation = new Vector3(Pivot.Rotation.X, targetRotationAngle, Pivot.Rotation.Z);
 		float timer = 0.0f;

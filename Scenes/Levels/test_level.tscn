@@ -18,10 +18,10 @@ albedo_color = Color(0.0625496, 0.296875, 0.013916, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_tnsdn"]
 material = SubResource("StandardMaterial3D_t857d")
-size = Vector3(4, 4, 30)
+size = Vector3(30, 4, 4)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_fbfxa"]
-points = PackedVector3Array(-2.2381, -2.2381, -15.2381, 2, 2, 14.8995, 2.04762, -2.2381, 15.2381, -2.2381, 2.04762, 15.2381, 2, 2, -14.8995, -2.2381, -2.2381, 15.2381, 2.04762, -2.2381, -15.2381, -2.2381, 2.04762, -15.2381)
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_v2mve"]
+points = PackedVector3Array(15, 2, 2, 15, 2, -2, -15, 2, 2, 15, -2, 2, 15, -2, -2, -15, 2, -2, -15, -2, 2, -15, -2, -2)
 
 [node name="Test Level" type="Node3D"]
 
@@ -41,6 +41,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
 mesh = SubResource("BoxMesh_tnsdn")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Floor/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
-shape = SubResource("ConvexPolygonShape3D_fbfxa")
+shape = SubResource("ConvexPolygonShape3D_v2mve")

@@ -14,7 +14,7 @@ SharedResources = ExtResource("2_ep1ny")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.02758, 0)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -9.97, 2.724, -0.418)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.418, 2.724, 9.97)
 fov = 45.0
 size = 7.645
 far = 500.0
