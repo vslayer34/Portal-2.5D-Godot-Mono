@@ -1,5 +1,6 @@
 using Godot;
 using Portal2_5D.Scripts.Helper;
+using Portal2_5D.Scripts.UI;
 
 
 namespace Portal2_5D.Scripts.Characters;
@@ -33,6 +34,9 @@ public partial class EmyController : CharacterBody3D
 
 	[Export]
 	public PortalGun PortalGun { get; private set; }
+
+	[Export]
+	public AimCursor AimCursor { get; private set; }
 	[ExportGroup("")]
 
 
@@ -112,6 +116,7 @@ public partial class EmyController : CharacterBody3D
 
     public override void _PhysicsProcess(double delta)
     {
+		WeaponHoldPoint.LookAt(AimCursor.MouseGlobalPosition, useModelFront: true);
 		// Apply gravity to the player
 		if (!IsOnFloor())
 		{

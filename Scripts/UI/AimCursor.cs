@@ -26,6 +26,7 @@ public partial class AimCursor : Node3D
 
     public override void _EnterTree()
     {
+		Input.MouseMode = Input.MouseModeEnum.Hidden;
         Camera = SharedResources.Camera;
     }
 
@@ -38,7 +39,7 @@ public partial class AimCursor : Node3D
 		
 		// CursorGroup.Position = MouseGlobalPosition;
 
-		Position = Camera.ProjectPosition(_mouseScreenPosition, Camera.Position.Z);
+		Position = Camera.ProjectPosition(_mouseScreenPosition, Camera.Position.Z - 1);
 
 		// GD.Print(_mouseScreenPosition);
 		GD.Print(CursorGroup.Position);
@@ -46,11 +47,5 @@ public partial class AimCursor : Node3D
 
 	// Getters and Setters-------------------------------------------------------------------------
 
-	public Vector3 MouseGlobalPosition
-	{
-		get
-		{
-			return new Vector3(_mouseScreenPosition.X, _mouseScreenPosition.Y, 0.0f);
-		}
-	}
+	public Vector3 MouseGlobalPosition { get => Position; }
 }

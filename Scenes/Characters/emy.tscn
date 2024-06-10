@@ -20,11 +20,12 @@ size = Vector3(0.5, 0.3, 0.3)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_et5l4"]
 
-[node name="Emy" type="CharacterBody3D" node_paths=PackedStringArray("Pivot", "WeaponHoldPoint", "PortalGun")]
+[node name="Emy" type="CharacterBody3D" node_paths=PackedStringArray("Pivot", "WeaponHoldPoint", "PortalGun", "AimCursor")]
 script = ExtResource("1_h0u17")
 Pivot = NodePath("Pivot")
 WeaponHoldPoint = NodePath("Pivot/WeaponHandle")
 PortalGun = NodePath("Pivot/WeaponHandle/Portal Gun")
+AimCursor = NodePath("Aim Cursor")
 _speed = 250.0
 _jumpForce = 8.0
 
