@@ -54,4 +54,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_et5l4")
 
 [node name="Aim Cursor" parent="." instance=ExtResource("4_cgk50")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+top_level = true

@@ -38,7 +38,7 @@ public partial class AimCursor : Node3D
 		
 		// CursorGroup.Position = MouseGlobalPosition;
 
-		CursorGroup.Position = Camera.ProjectPosition(_mouseScreenPosition, Camera.Position.X);
+		Position = Camera.ProjectPosition(_mouseScreenPosition, Camera.Position.Z);
 
 		// GD.Print(_mouseScreenPosition);
 		GD.Print(CursorGroup.Position);
