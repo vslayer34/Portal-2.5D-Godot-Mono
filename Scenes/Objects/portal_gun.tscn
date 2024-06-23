@@ -20,9 +20,8 @@ albedo_color = Color(0.0856934, 0.914062, 0.137466, 1)
 [sub_resource type="PrismMesh" id="PrismMesh_gv7gf"]
 material = SubResource("StandardMaterial3D_pfddx")
 
-[node name="Portal Gun" type="Node3D" node_paths=PackedStringArray("LaunchPoint")]
+[node name="Portal Gun" type="Node3D"]
 script = ExtResource("1_mo412")
-LaunchPoint = NodePath("LaunchPoint")
 
 [node name="Main Body" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.254093, 0, 0, 0, -2.18557e-08, -0.25, 0, 0.5, -1.09278e-08, 0, 0, 0)

@@ -1,0 +1,20 @@
+[gd_resource type="VisualShader" load_steps=3 format=3 uid="uid://bo0sjekaurwds"]
+
+[ext_resource type="Script" path="res://addons/ShaderLib/UV/TwirlUV.gd" id="1_4gqho"]
+
+[sub_resource type="VisualShaderNodeCustom" id="VisualShaderNodeCustom_r1rn7"]
+output_port_for_preview = 0
+default_input_values = [0, null, 1, Vector2(0.5, 0.5), 2, 10.0, 3, Vector2(0, 0)]
+initialized = true
+script = ExtResource("1_4gqho")
+
+[resource]
+code = "shader_type spatial;
+render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_lambert, specular_schlick_ggx;
+
+
+
+"
+graph_offset = Vector2(-205.124, -63.9436)
+nodes/fragment/2/node = SubResource("VisualShaderNodeCustom_r1rn7")
+nodes/fragment/2/position = Vector2(-140, 80)

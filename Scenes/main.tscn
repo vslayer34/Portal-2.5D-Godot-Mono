@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://b0vsbyx8cj0tu"]
+[gd_scene load_steps=6 format=3 uid="uid://b0vsbyx8cj0tu"]
 
 [ext_resource type="PackedScene" uid="uid://dxpkta83txyqn" path="res://Scenes/Characters/emy.tscn" id="1_egwbq"]
 [ext_resource type="Script" path="res://Scripts/GameManager.cs" id="1_g2qau"]
 [ext_resource type="Resource" uid="uid://cftaccl7w3u1g" path="res://Scripts/Resources/shared_resources.tres" id="2_ep1ny"]
 [ext_resource type="PackedScene" uid="uid://da7sb0r7ipxr2" path="res://Scenes/Levels/test_level.tscn" id="2_w4rqj"]
+[ext_resource type="PackedScene" uid="uid://clhnvh3obp4sd" path="res://Scenes/Environment/test_wall_section.tscn" id="5_t1m3r"]
 
 [node name="Main" type="Node3D" node_paths=PackedStringArray("Camera")]
 script = ExtResource("1_g2qau")
@@ -20,3 +21,9 @@ size = 7.645
 far = 500.0
 
 [node name="Test Level" parent="." instance=ExtResource("2_w4rqj")]
+
+[node name="TestWallSection" parent="." instance=ExtResource("5_t1m3r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.39647, 0, 0)
+
+[node name="TestWallSection2" parent="." instance=ExtResource("5_t1m3r")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 6.60353, 0, 0)

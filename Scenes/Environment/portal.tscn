@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://buf01p84y6q84"]
+
+[ext_resource type="Shader" uid="uid://bo0sjekaurwds" path="res://portal.tres" id="1_854ck"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dncqy"]
+render_priority = 0
+shader = ExtResource("1_854ck")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_odmng"]
+lightmap_size_hint = Vector2i(12, 12)
+material = SubResource("ShaderMaterial_dncqy")
+orientation = 0
+
+[node name="Portal" type="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("PlaneMesh_odmng")
