@@ -20,8 +20,9 @@ albedo_color = Color(0.0856934, 0.914062, 0.137466, 1)
 [sub_resource type="PrismMesh" id="PrismMesh_gv7gf"]
 material = SubResource("StandardMaterial3D_pfddx")
 
-[node name="Portal Gun" type="Node3D"]
+[node name="Portal Gun" type="Node3D" node_paths=PackedStringArray("LaunchPoint")]
 script = ExtResource("1_mo412")
+LaunchPoint = NodePath("LaunchPoint")
 
 [node name="Main Body" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.254093, 0, 0, 0, -2.18557e-08, -0.25, 0, 0.5, -1.09278e-08, 0, 0, 0)
@@ -51,3 +52,6 @@ skeleton = NodePath("../..")
 transform = Transform3D(-0.411356, 4.45674e-14, 3.59619e-08, 6.64708e-08, 0.225829, 0.760337, -1.99502e-08, 0.768335, -0.228204, -0.451527, 2.13813, 3.13637)
 mesh = SubResource("PrismMesh_gv7gf")
 skeleton = NodePath("../..")
+
+[node name="LaunchPoint" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.810205)
