@@ -1,18 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://buf01p84y6q84"]
+[gd_scene load_steps=5 format=3 uid="uid://dn7g3j5s7kmt"]
 
-[ext_resource type="Shader" uid="uid://dcsawj35pvs11" path="res://Shaders/portal.tres" id="1_5y7xn"]
-[ext_resource type="Texture2D" uid="uid://da4e16a7uja2c" path="res://Assets/DefaultParticleReplacement.png" id="2_cphhl"]
+[ext_resource type="Shader" uid="uid://dcsawj35pvs11" path="res://Shaders/portal.tres" id="1_0u14h"]
+[ext_resource type="Texture2D" uid="uid://da4e16a7uja2c" path="res://Assets/DefaultParticleReplacement.png" id="2_7k6la"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_53cs8"]
 render_priority = 0
-shader = ExtResource("1_5y7xn")
+shader = ExtResource("1_0u14h")
 shader_parameter/TwirlStrength = 10.0
 shader_parameter/CellDensity = 2.069
 shader_parameter/Speed = 2.63
 shader_parameter/DisolveRatio = -0.487
 shader_parameter/Color = Color(0.120361, 0.224737, 0.90625, 1)
 shader_parameter/ColorIntensity = 9.015
-shader_parameter/Texture = ExtResource("2_cphhl")
+shader_parameter/Texture = ExtResource("2_7k6la")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_odmng"]
 lightmap_size_hint = Vector2i(12, 12)
