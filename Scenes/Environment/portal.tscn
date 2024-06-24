@@ -1,16 +1,25 @@
-[gd_scene load_steps=4 format=3 uid="uid://buf01p84y6q84"]
+[gd_scene load_steps=5 format=3 uid="uid://buf01p84y6q84"]
 
-[ext_resource type="Shader" uid="uid://bo0sjekaurwds" path="res://portal.tres" id="1_854ck"]
+[ext_resource type="Shader" uid="uid://dcsawj35pvs11" path="res://Shaders/portal.tres" id="1_5y7xn"]
+[ext_resource type="Texture2D" uid="uid://da4e16a7uja2c" path="res://Assets/DefaultParticleReplacement.png" id="2_cphhl"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_dncqy"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_53cs8"]
 render_priority = 0
-shader = ExtResource("1_854ck")
+shader = ExtResource("1_5y7xn")
+shader_parameter/TwirlStrength = 10.0
+shader_parameter/CellDensity = 2.069
+shader_parameter/Speed = 2.63
+shader_parameter/DisolveRatio = -0.487
+shader_parameter/Color = Color(0.120361, 0.224737, 0.90625, 1)
+shader_parameter/ColorIntensity = 9.015
+shader_parameter/Texture = ExtResource("2_cphhl")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_odmng"]
 lightmap_size_hint = Vector2i(12, 12)
-material = SubResource("ShaderMaterial_dncqy")
+material = SubResource("ShaderMaterial_53cs8")
+size = Vector2(4, 4)
 orientation = 0
 
 [node name="Portal" type="MeshInstance3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00394201, 1, 0.0156374)
 mesh = SubResource("PlaneMesh_odmng")
