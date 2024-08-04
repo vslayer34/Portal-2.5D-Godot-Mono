@@ -1,7 +1,12 @@
 using Godot;
-using PortalD2.D.Scripts.Helper;
+using Portal2_5D.Scripts.Helper;
 using System;
 
+public enum PortalType
+{
+    Orange,
+    Blue
+}
 public partial class GameManager : Node3D
 {
 	[ExportGroup("Required Nodes")]
@@ -18,5 +23,6 @@ public partial class GameManager : Node3D
     public override void _EnterTree()
     {
         SharedResources.Camera = Camera;
+        SharedResources.GameManager = this;
     }
 }

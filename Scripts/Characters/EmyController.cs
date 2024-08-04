@@ -1,5 +1,6 @@
 using Godot;
 using Portal2_5D.Scripts.Helper;
+using Portal2_5D.Scripts.Objects;
 using Portal2_5D.Scripts.UI;
 
 

@@ -1,5 +1,5 @@
 using Godot;
-using PortalD2.D.Scripts.Helper;
+using Portal2_5D.Scripts.Helper;
 using System;
 
 namespace Portal2_5D.Scripts.UI;

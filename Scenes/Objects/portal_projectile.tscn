@@ -1,0 +1,70 @@
+[gd_scene load_steps=12 format=3 uid="uid://b1tse6e4yy5um"]
+
+[ext_resource type="Script" path="res://Scripts/Objects/PortalProjectile.cs" id="1_aoi6e"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b3qwx"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_tt7o6"]
+material = SubResource("StandardMaterial3D_b3qwx")
+
+[sub_resource type="Curve" id="Curve_arb82"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.985148, 0.989011), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_dt1vs"]
+curve = SubResource("Curve_arb82")
+
+[sub_resource type="Curve" id="Curve_pntxi"]
+max_value = 3.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.995049, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_7yr3x"]
+curve = SubResource("Curve_pntxi")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_poq4e"]
+emission_shape_scale = Vector3(0.5, 0.5, 0.5)
+emission_shape = 1
+emission_sphere_radius = 1.0
+orbit_velocity_curve = SubResource("CurveTexture_dt1vs")
+gravity = Vector3(0, 0, 5)
+radial_accel_min = 1.0
+radial_accel_max = 3.0
+scale_over_velocity_curve = SubResource("CurveTexture_7yr3x")
+turbulence_noise_speed = Vector3(0, 0, 5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6s26w"]
+albedo_color = Color(1, 0, 0, 1)
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+use_particle_trails = true
+
+[sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_b54vg"]
+material = SubResource("StandardMaterial3D_6s26w")
+shape = 0
+size = 60.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_w45vi"]
+
+[node name="PortalProjectile" type="Area3D" node_paths=PackedStringArray("ProjectileMaterial")]
+script = ExtResource("1_aoi6e")
+ProjectileMaterial = NodePath("MeshInstance3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_tt7o6")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.571783, 0.414957)
+lifetime = 4.0
+preprocess = 1.5
+explosiveness = 1.0
+trail_enabled = true
+process_material = SubResource("ParticleProcessMaterial_poq4e")
+draw_pass_1 = SubResource("RibbonTrailMesh_b54vg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_w45vi")

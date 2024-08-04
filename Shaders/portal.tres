@@ -94,7 +94,7 @@ uniform float TwirlStrength : hint_range(0, 10) = 5;
 uniform float CellDensity : hint_range(0, 10) = 8;
 uniform float Speed = 0.5;
 uniform float DisolveRatio : hint_range(-5, 10) = 1;
-uniform vec4 Color : source_color = vec4(0.198000, 0.170000, 8.893001, 1.000000);
+uniform vec4 Color : source_color = vec4(0.198000, 0.170000, 8.893000, 1.000000);
 uniform float ColorIntensity = 1;
 
 
@@ -232,7 +232,6 @@ void fragment() {
 
 }
 "
-graph_offset = Vector2(-425.066, 541.78)
 modes/cull = 2
 nodes/fragment/0/position = Vector2(600, 440)
 nodes/fragment/3/node = SubResource("VisualShaderNodeFloatParameter_e1ovp")
