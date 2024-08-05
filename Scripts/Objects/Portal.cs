@@ -1,12 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Godot;
 
-namespace PortalD2.D.Scripts.Objects
+
+namespace PortalD2.D.Scripts.Objects;
+public partial class Portal : Node3D
 {
-    public class Portal
-    {
-        
-    }
+    
 }

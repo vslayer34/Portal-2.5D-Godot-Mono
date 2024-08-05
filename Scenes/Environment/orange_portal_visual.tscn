@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://wqs41745i5vj"]
+
+[ext_resource type="Shader" uid="uid://dcsawj35pvs11" path="res://Shaders/portal.tres" id="1_y5xyt"]
+[ext_resource type="Texture2D" uid="uid://da4e16a7uja2c" path="res://Assets/DefaultParticleReplacement.png" id="2_eqrua"]
+[ext_resource type="Script" path="res://Scripts/Objects/OrangePortal.cs" id="3_4suyo"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_53cs8"]
+render_priority = 0
+shader = ExtResource("1_y5xyt")
+shader_parameter/TwirlStrength = 10.0
+shader_parameter/CellDensity = 2.069
+shader_parameter/Speed = 2.63
+shader_parameter/DisolveRatio = -0.487
+shader_parameter/Color = Color(1, 0.513726, 0, 1)
+shader_parameter/ColorIntensity = 0.5
+shader_parameter/Texture = ExtResource("2_eqrua")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_odmng"]
+lightmap_size_hint = Vector2i(12, 12)
+material = SubResource("ShaderMaterial_53cs8")
+size = Vector2(4, 4)
+orientation = 0
+
+[node name="OrangePortal" type="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00394201, 1, 0.0156374)
+mesh = SubResource("PlaneMesh_odmng")
+script = ExtResource("3_4suyo")

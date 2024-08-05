@@ -1,15 +1,9 @@
 using Godot;
+using PortalD2.D.Scripts.Objects;
 using System;
 
-public partial class OrangePortal : MeshInstance3D
+namespace Portal2_5D.Scripts.Objects;
+public partial class OrangePortal : Portal
 {
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
-	{
-	}
-
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
-	}
+	
 }
