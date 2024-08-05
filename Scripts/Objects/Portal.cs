@@ -9,6 +9,10 @@ public abstract partial class Portal : Node3D
     [Export]
     public Area3D SwapArea { get; protected set; }
 
+
+    [Export]
+    public Node3D PlayerSpawnArea { get; protected set; }
+
     [Export]
     public SharedPool SharedPool { get; protected set; }
 

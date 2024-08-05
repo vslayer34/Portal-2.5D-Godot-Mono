@@ -21,6 +21,7 @@ public partial class BluePortal : Portal
 			else
 			{
 				GD.Print("Can teleport safely");
+				emy.GlobalPosition = SharedPool.OrangePortal.PlayerSpawnArea.GlobalPosition;
 			}
 		}
     }

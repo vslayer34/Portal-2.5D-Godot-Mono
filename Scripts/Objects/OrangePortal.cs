@@ -14,6 +14,7 @@ public partial class OrangePortal : Portal
 		if (body is EmyController emy)
 		{
 			GD.Print("Detected player at the blue portal\n");
+
 			if (SharedPool.BluePortal == null)
 			{
 				GD.PushWarning("Can't teleport into nothing");
@@ -21,6 +22,7 @@ public partial class OrangePortal : Portal
 			else
 			{
 				GD.Print("Can teleport safely");
+				emy.GlobalPosition = SharedPool.BluePortal.PlayerSpawnArea.GlobalPosition;
 			}
 		}
     }

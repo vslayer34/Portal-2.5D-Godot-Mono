@@ -5,11 +5,12 @@
 [ext_resource type="Script" path="res://Scripts/Objects/BluePortal.cs" id="3_cl5al"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yaxr2"]
-size = Vector3(1, 1.98584, 3.10352)
+size = Vector3(0.136719, 1.98584, 3.10352)
 
-[node name="BluePortal" type="Node3D" node_paths=PackedStringArray("SwapArea")]
+[node name="BluePortal" type="Node3D" node_paths=PackedStringArray("SwapArea", "PlayerSpawnArea")]
 script = ExtResource("3_cl5al")
 SwapArea = NodePath("Area3D")
+PlayerSpawnArea = NodePath("PlayerSpawn")
 SharedPool = ExtResource("2_nxykn")
 
 [node name="BluePortal" parent="." instance=ExtResource("1_16q48")]
@@ -19,5 +20,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.76952, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49292, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.431641, 0.49292, 0)
 shape = SubResource("BoxShape3D_yaxr2")
+
+[node name="PlayerSpawn" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -1, 0)

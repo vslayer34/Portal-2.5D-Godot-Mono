@@ -4,12 +4,13 @@
 [ext_resource type="PackedScene" uid="uid://wqs41745i5vj" path="res://Scenes/Environment/orange_portal_visual.tscn" id="2_i38wh"]
 [ext_resource type="Script" path="res://Scripts/Objects/OrangePortal.cs" id="3_2bexc"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_yxp36"]
-size = Vector3(1, 1.98584, 3.10352)
+[sub_resource type="BoxShape3D" id="BoxShape3D_ycsfr"]
+size = Vector3(0.136719, 1.98584, 3.10352)
 
-[node name="OrangePortal" type="Node3D" node_paths=PackedStringArray("SwapArea")]
+[node name="OrangePortal" type="Node3D" node_paths=PackedStringArray("SwapArea", "PlayerSpawnArea")]
 script = ExtResource("3_2bexc")
 SwapArea = NodePath("Area3D")
+PlayerSpawnArea = NodePath("PlayerSpawn")
 SharedPool = ExtResource("2_bwiam")
 
 [node name="OrangePortal" parent="." instance=ExtResource("2_i38wh")]
@@ -20,5 +21,8 @@ script = null
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.76952, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49292, 0)
-shape = SubResource("BoxShape3D_yxp36")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.431641, 0.49292, 0)
+shape = SubResource("BoxShape3D_ycsfr")
+
+[node name="PlayerSpawn" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -1, 0)
