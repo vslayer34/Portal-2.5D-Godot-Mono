@@ -14,4 +14,11 @@ public partial class GameSharedEvents : Resource
 	/// Called when the player press the secondary action
 	/// </summary>
 	public delegate void OnSeconderyActionEventHandler();
+
+
+	[Signal]
+	/// <summary>
+	/// Called when the player press the secondary action
+	/// </summary>
+	public delegate void OnClearActionEventHandler();
 }

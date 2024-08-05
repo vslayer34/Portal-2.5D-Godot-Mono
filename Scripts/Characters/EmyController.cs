@@ -108,6 +108,7 @@ public partial class EmyController : CharacterBody3D
 		if (Input.IsActionJustPressed(InputMapActionNames.CLEAR))
 		{
 			GD.Print("Clear all portals");
+			SharedEvents.EmitSignal(GameSharedEvents.SignalName.OnClearAction);
 		}
 
 		Input.SetCustomMouseCursor(null, Input.CursorShape.PointingHand);

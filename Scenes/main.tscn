@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://b0vsbyx8cj0tu"]
+[gd_scene load_steps=12 format=3 uid="uid://b0vsbyx8cj0tu"]
 
 [ext_resource type="PackedScene" uid="uid://dxpkta83txyqn" path="res://Scenes/Characters/emy.tscn" id="1_egwbq"]
 [ext_resource type="Script" path="res://Scripts/GameManager.cs" id="1_g2qau"]
 [ext_resource type="Resource" uid="uid://cftaccl7w3u1g" path="res://Scripts/Resources/shared_resources.tres" id="2_ep1ny"]
 [ext_resource type="PackedScene" uid="uid://da7sb0r7ipxr2" path="res://Scenes/Levels/test_level.tscn" id="2_w4rqj"]
+[ext_resource type="Resource" uid="uid://dvabtcoe3ob2c" path="res://Scripts/Resources/shared_events.tres" id="3_7yiri"]
 [ext_resource type="PackedScene" uid="uid://clhnvh3obp4sd" path="res://Scenes/Environment/test_wall_section.tscn" id="5_t1m3r"]
 [ext_resource type="PackedScene" uid="uid://b1tse6e4yy5um" path="res://Scenes/Objects/portal_projectile.tscn" id="6_mk164"]
 [ext_resource type="Script" path="res://Scripts/Helper/PoolManager.cs" id="7_54ufv"]
@@ -15,6 +16,8 @@
 script = ExtResource("1_g2qau")
 Camera = NodePath("Camera3D")
 SharedResources = ExtResource("2_ep1ny")
+SharedEvents = ExtResource("3_7yiri")
+SharedPool = ExtResource("8_op3h1")
 
 [node name="Emy" parent="." instance=ExtResource("1_egwbq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.02758, 0)

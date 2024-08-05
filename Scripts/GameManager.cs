@@ -16,6 +16,12 @@ public partial class GameManager : Node3D
 	[Export]
 	public GameSharedResources SharedResources { get; private set; }
 
+    [Export]
+	public GameSharedEvents SharedEvents { get; private set; }
+
+    [Export]
+    public SharedPool SharedPool { get; private set; }
+
 
 
     // Game Loop Methods---------------------------------------------------------------------------
@@ -24,5 +30,22 @@ public partial class GameManager : Node3D
     {
         SharedResources.Camera = Camera;
         SharedResources.GameManager = this;
+    }
+
+    public override void _Ready()
+    {
+        SharedEvents.OnClearAction += SharedEvents_OnClearAction;
+    }
+
+    public override void _ExitTree()
+    {
+        SharedEvents.OnClearAction -= SharedEvents_OnClearAction;
+    }
+
+    // Signal Methods------------------------------------------------------------------------------
+
+    private void SharedEvents_OnClearAction()
+    {
+        SharedPool.DisablePortals();
     }
 }

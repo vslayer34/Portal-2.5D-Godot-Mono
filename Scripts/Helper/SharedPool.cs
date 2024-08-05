@@ -6,6 +6,8 @@ using System.Collections.Generic;
 namespace Portal2_5D.Scripts.Helper;
 public partial class SharedPool : Resource
 {
+	[Export]
+	public GameSharedResources SharedResources { get; private set; }
 	// [Export]
 	public List<PortalProjectile> PortalProjectilesPool = new List<PortalProjectile>();
 
@@ -90,5 +92,24 @@ public partial class SharedPool : Resource
 		{
 			node.ProcessMode = Node.ProcessModeEnum.Inherit;
 		}
+	}
+
+
+	public void DisablePortals()
+	{
+		foreach (var portal in AvailablePortals)
+		{
+			portal.GetParent().RemoveChild(portal);
+			SharedResources.GameManager.AddChild(portal);
+
+			portal.Visible = false;
+			portal.SetProcess(false);
+			portal.SetPhysicsProcess(false);
+			
+			portal.ProcessMode = Node.ProcessModeEnum.Disabled;
+		}
+
+		BluePortal = null;
+		OrangePortal = null;
 	}
 }
