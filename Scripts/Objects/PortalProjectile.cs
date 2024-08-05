@@ -83,6 +83,15 @@ public partial class PortalProjectile : Area3D
 				// SharedResources.GameManager.RemoveChild(_portal);
 
 				wall.PortalParent.AddChild(_portal);
+
+				if (_portal is BluePortal)
+				{
+					SharedPool.BluePortal = _portal as BluePortal;
+				}
+				else
+				{
+					SharedPool.OrangePortal = _portal as OrangePortal;
+				}
 			}
 			else
 			{

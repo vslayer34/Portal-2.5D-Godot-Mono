@@ -1,10 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://byt28681x42ov"]
+[gd_scene load_steps=5 format=3 uid="uid://byt28681x42ov"]
 
+[ext_resource type="Resource" uid="uid://cqkpia02hlqvs" path="res://Scripts/Resources/shared_pool.tres" id="2_bwiam"]
 [ext_resource type="PackedScene" uid="uid://wqs41745i5vj" path="res://Scenes/Environment/orange_portal_visual.tscn" id="2_i38wh"]
 [ext_resource type="Script" path="res://Scripts/Objects/OrangePortal.cs" id="3_2bexc"]
 
-[node name="OrangePortal" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_yxp36"]
+size = Vector3(1, 1.98584, 3.10352)
+
+[node name="OrangePortal" type="Node3D" node_paths=PackedStringArray("SwapArea")]
 script = ExtResource("3_2bexc")
+SwapArea = NodePath("Area3D")
+SharedPool = ExtResource("2_bwiam")
 
 [node name="OrangePortal" parent="." instance=ExtResource("2_i38wh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00394201, 0, 0.0156374)
+script = null
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.76952, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49292, 0)
+shape = SubResource("BoxShape3D_yxp36")

@@ -1,10 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://buf01p84y6q84"]
+[gd_scene load_steps=5 format=3 uid="uid://buf01p84y6q84"]
 
 [ext_resource type="PackedScene" uid="uid://bkm88bte371s1" path="res://Scenes/Environment/blue_portal_visual.tscn" id="1_16q48"]
+[ext_resource type="Resource" uid="uid://cqkpia02hlqvs" path="res://Scripts/Resources/shared_pool.tres" id="2_nxykn"]
 [ext_resource type="Script" path="res://Scripts/Objects/BluePortal.cs" id="3_cl5al"]
 
-[node name="BluePortal" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_yaxr2"]
+size = Vector3(1, 1.98584, 3.10352)
+
+[node name="BluePortal" type="Node3D" node_paths=PackedStringArray("SwapArea")]
 script = ExtResource("3_cl5al")
+SwapArea = NodePath("Area3D")
+SharedPool = ExtResource("2_nxykn")
 
 [node name="BluePortal" parent="." instance=ExtResource("1_16q48")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.76952, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49292, 0)
+shape = SubResource("BoxShape3D_yaxr2")

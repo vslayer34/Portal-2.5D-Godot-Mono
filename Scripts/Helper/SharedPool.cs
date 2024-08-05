@@ -11,6 +11,9 @@ public partial class SharedPool : Resource
 
 	public List<Portal> AvailablePortals { get; set; } = new List<Portal>();
 
+	public BluePortal BluePortal { get; set; }
+	public OrangePortal OrangePortal { get; set; }
+
 
 
 	// Member Methods------------------------------------------------------------------------------
@@ -78,5 +81,14 @@ public partial class SharedPool : Resource
 		node.Visible = isActive;
 		node.SetProcess(isActive);
 		node.SetPhysicsProcess(isActive);
+		
+		if (!isActive)
+		{
+			node.ProcessMode = Node.ProcessModeEnum.Disabled;
+		}
+		else
+		{
+			node.ProcessMode = Node.ProcessModeEnum.Inherit;
+		}
 	}
 }
