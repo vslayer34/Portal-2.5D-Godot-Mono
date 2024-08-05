@@ -33,8 +33,6 @@ public partial class PoolManager : Node
 
 	/// <summary>
 	/// Add portal projectiles to the scene and set their visibility to false for later use
-	/// </summary> <summary>
-	/// 
 	/// </summary>
 	private void SetProjectilePool()
 	{

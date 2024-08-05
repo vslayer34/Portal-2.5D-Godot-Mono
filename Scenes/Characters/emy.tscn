@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://dxpkta83txyqn"]
+[gd_scene load_steps=11 format=3 uid="uid://dxpkta83txyqn"]
 
 [ext_resource type="Script" path="res://Scripts/Characters/EmyController.cs" id="1_h0u17"]
 [ext_resource type="PackedScene" uid="uid://cu6b14cb67ab" path="res://Assets/Characters/Rose/Rose.glb" id="1_xldho"]
+[ext_resource type="Resource" uid="uid://dvabtcoe3ob2c" path="res://Scripts/Resources/shared_events.tres" id="2_xu8bc"]
 [ext_resource type="PackedScene" uid="uid://dt37dq5uact7m" path="res://Scenes/Objects/portal_gun.tscn" id="3_ks0a5"]
 [ext_resource type="PackedScene" uid="uid://cekq0mkyh35fk" path="res://Scenes/UI/aim_cursor.tscn" id="4_cgk50"]
 
@@ -22,6 +23,7 @@ size = Vector3(0.5, 0.3, 0.3)
 
 [node name="Emy" type="CharacterBody3D" node_paths=PackedStringArray("Pivot", "WeaponHoldPoint", "PortalGun", "AimCursor")]
 script = ExtResource("1_h0u17")
+SharedEvents = ExtResource("2_xu8bc")
 Pivot = NodePath("Pivot")
 WeaponHoldPoint = NodePath("Pivot/WeaponHandle")
 PortalGun = NodePath("Pivot/WeaponHandle/Portal Gun")

@@ -13,6 +13,7 @@ public partial class EmyController : CharacterBody3D
 	[Signal]
 	public delegate void OnChangeDirectionEventHandler();
 
+
 	enum MovementDirection
 	{
 		None = 0,
@@ -27,6 +28,9 @@ public partial class EmyController : CharacterBody3D
 	}
 
 	[ExportGroup("Required Nodes")]
+	[Export]
+	public GameSharedEvents SharedEvents { get; private set; }
+
 	[Export]
 	public Node3D Pivot { get; private set; }
 
@@ -93,12 +97,14 @@ public partial class EmyController : CharacterBody3D
 
 		if (Input.IsActionJustPressed(InputMapActionNames.PRIMARY_FIRE))
 		{
-			GD.Print("primary attack is pressed");
+			// GD.Print("primary attack is pressed");
+			SharedEvents.EmitSignal(GameSharedEvents.SignalName.OnPrimaryAction);
 		}
 
 		if (Input.IsActionJustPressed(InputMapActionNames.SECONDARY_FIRE))
 		{
-			GD.Print("secondary attack is pressed");
+			// GD.Print("secondary attack is pressed");
+			SharedEvents.EmitSignal(GameSharedEvents.SignalName.OnSeconderyAction);
 		}
 
 		Input.SetCustomMouseCursor(null, Input.CursorShape.PointingHand);

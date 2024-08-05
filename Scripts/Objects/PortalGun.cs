@@ -7,18 +7,46 @@ public partial class PortalGun : Node3D
 {
 	[ExportGroup("Required Nodes")]	
 	[Export]
+	public GameSharedEvents SharedEvents { get; private set; }
+	[Export]
 	public Node3D LaunchPoint { get; private set; }
 	
 	private PortalType _portalType;
 
 
 
-	// Game Loop Methods---------------------------------------------------------------------------
+    // Game Loop Methods---------------------------------------------------------------------------
 
-	// Mebmer Methods------------------------------------------------------------------------------
+    public override void _Ready()
+    {
+        SharedEvents.OnPrimaryAction += PlayerInput_OnPrimaryAction;
+        SharedEvents.OnSeconderyAction += PlayerInput_OnSeconderyAction;
+    }
 
-	public void ShootPortal(PortalType portalType)
+    public override void _ExitTree()
+    {
+        SharedEvents.OnPrimaryAction -= PlayerInput_OnPrimaryAction;
+        SharedEvents.OnSeconderyAction -= PlayerInput_OnSeconderyAction;
+    }
+    // Mebmer Methods------------------------------------------------------------------------------
+
+    public void ShootPortal(PortalType portalType)
 	{
 		// RayCastOrigin.
+	}
+
+	// Signal Methods------------------------------------------------------------------------------
+	private void PlayerInput_OnPrimaryAction()
+	{
+		GD.Print("primary attack is pressed");
+		_portalType = PortalType.Blue;
+		ShootPortal(_portalType);
+	}
+
+	private void PlayerInput_OnSeconderyAction()
+	{
+		GD.Print("secondary attack is pressed");
+		_portalType = PortalType.Orange;
+		ShootPortal(_portalType);
 	}
 }
