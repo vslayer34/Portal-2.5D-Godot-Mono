@@ -1,4 +1,5 @@
 using Godot;
+using Portal2_5D.Scripts.Helper;
 using System;
 
 
@@ -8,10 +9,16 @@ public partial class PortalGun : Node3D
 	[ExportGroup("Required Nodes")]	
 	[Export]
 	public GameSharedEvents SharedEvents { get; private set; }
+
+	[Export]
+	public SharedPool SharedPool { get; private set; }
+
+
 	[Export]
 	public Node3D LaunchPoint { get; private set; }
 	
 	private PortalType _portalType;
+	private PortalProjectile _newProjectile;
 
 
 
@@ -33,6 +40,26 @@ public partial class PortalGun : Node3D
     public void ShootPortal(PortalType portalType)
 	{
 		// RayCastOrigin.
+		_newProjectile = SharedPool.GetPortalFromPool();
+		_newProjectile.SetPortalType(portalType);
+
+		// _newProjectile.GlobalPosition = LaunchPoint.GlobalPosition;
+		_newProjectile.GlobalTransform = LaunchPoint.GlobalTransform;
+		// _newProjectile.GlobalPosition = LaunchPoint.GlobalPosition;
+		// switch (_portalType)
+		// {
+		// 	case PortalType.Blue:
+		// 		_newProjectile.SetPortalType(PortalType.Blue);
+		// 		break;
+			
+		// 	case PortalType.Orange:
+		// 		_newProjectile.SetPortalType(PortalType.Orange);
+		// 		break;
+			
+		// 	default:
+		// 		GD.Print("There's no such type for the portals");
+		// 		break;
+		// }
 	}
 
 	// Signal Methods------------------------------------------------------------------------------

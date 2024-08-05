@@ -15,18 +15,29 @@ public partial class PortalProjectile : Area3D
 	[Export]
 	public MeshInstance3D ProjectileMaterial { get; private set; }
 
-	
+	private PortalType _portalType;
+
+	private const float SPEED = 10.0f;
 
 
 
-	// Game Loop Methods---------------------------------------------------------------------------
-	// Memeber Methods-----------------------------------------------------------------------------
-	
-	/// <summary>
-	/// Set the type of the portal projectile at launch
-	/// </summary>
-	private void SetPortalType()
+    // Game Loop Methods---------------------------------------------------------------------------
+
+    public override void _PhysicsProcess(double delta)
+    {
+        base._PhysicsProcess(delta);
+		
+		// The -1 because forward is (0, 0, -1)
+		Translate(Vector3.Forward * -1 * SPEED * (float)delta);
+    }
+    // Memeber Methods-----------------------------------------------------------------------------
+
+    /// <summary>
+    /// Set the type of the portal projectile at launch
+    /// </summary>
+    public void SetPortalType(PortalType portalType)
 	{
-
+		_portalType = portalType;
+		// GlobalPosition
 	}
 }
