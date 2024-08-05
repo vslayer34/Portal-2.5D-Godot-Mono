@@ -1,5 +1,6 @@
 using Godot;
 using Portal2_5D.Scripts.Helper;
+using PortalD2.D.Scripts.Objects;
 using System;
 
 namespace Portal2_5D.Scripts.Objects;
@@ -8,6 +9,9 @@ public partial class PortalProjectile : Area3D
 	[ExportCategory("Required")]
 	[Export]
 	public SharedPool SharedPool { get; private set; }
+
+	[Export]
+	public GameSharedResources SharedResources { get; private set; }
 
 	[Export]
 	public Timer DisableSelfTimer { get; private set; }
@@ -19,6 +23,7 @@ public partial class PortalProjectile : Area3D
 	public StandardMaterial3D ProjectileMaterial { get; private set; }
 
 	private PortalType _portalType;
+	private Portal _portal;
 
 	private const float SPEED = 10.0f;
 
@@ -53,7 +58,7 @@ public partial class PortalProjectile : Area3D
 		{
 			ProjectileMaterial.AlbedoColor = Colors.Blue;
 		}
-		else
+		else if (_portalType == PortalType.Orange)
 		{
 			ProjectileMaterial.AlbedoColor = Colors.Orange;
 		}
@@ -70,7 +75,19 @@ public partial class PortalProjectile : Area3D
 	{
 		if (area is PortableWall wall)
 		{
-			GD.Print("Hit a portable wall");
+			if (wall.PortalParent.GetChildCount() == 0)
+			{
+				_portal = SharedPool.GetPortalFromPool(_portalType);
+				GD.Print(SharedPool.GetPortalFromPool(_portalType));
+				_portal.GetParent().RemoveChild(_portal);
+				// SharedResources.GameManager.RemoveChild(_portal);
+
+				wall.PortalParent.AddChild(_portal);
+			}
+			else
+			{
+				GD.Print("Can't create a portal above another portal");
+			}
 		}
 	}
 }

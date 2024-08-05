@@ -4,7 +4,6 @@
 [ext_resource type="Script" path="res://Scripts/Objects/OrangePortal.cs" id="3_2bexc"]
 
 [node name="OrangePortal" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00394201, 0, 0.0156374)
 script = ExtResource("3_2bexc")
 
 [node name="OrangePortal" parent="." instance=ExtResource("2_i38wh")]

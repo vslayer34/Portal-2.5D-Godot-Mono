@@ -35,20 +35,21 @@ public partial class SharedPool : Resource
 
 	public Portal GetPortalFromPool(PortalType portalType)
 	{
-		GD.Print($"Number of items in the pool: {PortalProjectilesPool.Count}");
 		foreach (var portal in AvailablePortals)
 		{
-			if (portalType == PortalType.Blue)
+			if (portalType == PortalType.Blue && portal is BluePortal bluePortal)
 			{
 				SetNodeActiveState<Portal>(portal, true);
+				portal.Position = Vector3.Zero;
 				// AvailablePortals.Remove(portal);
-				return portal as BluePortal;
+				return bluePortal;
 			}
-			else
+			else if (portalType == PortalType.Orange && portal is OrangePortal orangePortal)
 			{
 				SetNodeActiveState<Portal>(portal, true);
+				portal.Position = Vector3.Zero;
 				// AvailablePortals.Remove(portal);
-				return portal as OrangePortal;
+				return orangePortal;
 			}
 		}
 
