@@ -97,14 +97,17 @@ public partial class EmyController : CharacterBody3D
 
 		if (Input.IsActionJustPressed(InputMapActionNames.PRIMARY_FIRE))
 		{
-			// GD.Print("primary attack is pressed");
 			SharedEvents.EmitSignal(GameSharedEvents.SignalName.OnPrimaryAction);
 		}
 
 		if (Input.IsActionJustPressed(InputMapActionNames.SECONDARY_FIRE))
 		{
-			// GD.Print("secondary attack is pressed");
 			SharedEvents.EmitSignal(GameSharedEvents.SignalName.OnSeconderyAction);
+		}
+
+		if (Input.IsActionJustPressed(InputMapActionNames.CLEAR))
+		{
+			GD.Print("Clear all portals");
 		}
 
 		Input.SetCustomMouseCursor(null, Input.CursorShape.PointingHand);

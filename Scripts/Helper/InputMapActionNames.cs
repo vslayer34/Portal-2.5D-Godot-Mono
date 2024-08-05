@@ -33,4 +33,9 @@ public class InputMapActionNames
     /// Reference to the<c>"secondary_fire"</c>input action name
     /// </summary>
     public const string SECONDARY_FIRE = "secondary_fire";
+
+    /// <summary>
+    /// Reference to the<c>"clear"</c>input action name
+    /// </summary>
+    public const string CLEAR = "clear";
 }
