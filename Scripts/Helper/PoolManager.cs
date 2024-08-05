@@ -1,4 +1,5 @@
 using Godot;
+using Portal2_5D.Scripts.Objects;
 using System;
 
 namespace Portal2_5D.Scripts.Helper;
@@ -44,10 +45,10 @@ public partial class PoolManager : Node
 			newProjectile = PortalProjectileScene.Instantiate() as PortalProjectile;
 			// SharedResources.GameManager.AddChild(newProjectile);
 			newProjectile.Name = $"PortalProjectil@{i}";
-			DeactivateNode<PortalProjectile>(newProjectile);
+			// DeactivateNode<PortalProjectile>(newProjectile);
 			SharedResources.GameManager.CallDeferred(MethodName.AddChild, newProjectile);
 
-			SharedPool.PortalsPool.Add(newProjectile);
+			SharedPool.AddToPool<PortalProjectile>(newProjectile, SharedPool.PortalsPool);
 		}
 	}
 
@@ -59,5 +60,6 @@ public partial class PoolManager : Node
 	{
 		node.Visible = false;
 		node.SetProcess(false);
+		node.SetPhysicsProcess(false);
 	}
 }
