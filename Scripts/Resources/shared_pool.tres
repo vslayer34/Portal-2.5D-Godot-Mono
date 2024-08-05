@@ -1,0 +1,6 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://cqkpia02hlqvs"]
+
+[ext_resource type="Script" path="res://Scripts/Helper/SharedPool.cs" id="1_0s753"]
+
+[resource]
+script = ExtResource("1_0s753")
