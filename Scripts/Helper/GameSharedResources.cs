@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using Godot;
+using PortalD2.D.Scripts.Objects;
 
 namespace Portal2_5D.Scripts.Helper;
 public partial class GameSharedResources : Resource

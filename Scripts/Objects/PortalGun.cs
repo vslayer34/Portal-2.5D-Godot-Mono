@@ -40,7 +40,7 @@ public partial class PortalGun : Node3D
     public void ShootPortal(PortalType portalType)
 	{
 		// RayCastOrigin.
-		_newProjectile = SharedPool.GetPortalFromPool();
+		_newProjectile = SharedPool.GetPortalProjectileFromPool();
 		_newProjectile.SetPortalType(portalType);
 
 		// _newProjectile.GlobalPosition = LaunchPoint.GlobalPosition;

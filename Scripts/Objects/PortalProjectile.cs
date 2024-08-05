@@ -55,7 +55,7 @@ public partial class PortalProjectile : Area3D
 
 	private void DisableSelfTimer_Timeout()
 	{
-		SharedPool.AddToPool(this, SharedPool.PortalsPool);
+		SharedPool.AddToPool(this, SharedPool.PortalProjectilesPool);
 	}
 
 	private void Projectile_BodyEntered(Node3D area)

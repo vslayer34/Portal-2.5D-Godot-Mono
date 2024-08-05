@@ -1,27 +1,29 @@
 using Godot;
 using Portal2_5D.Scripts.Objects;
-using System;
+using PortalD2.D.Scripts.Objects;
 using System.Collections.Generic;
 
 namespace Portal2_5D.Scripts.Helper;
 public partial class SharedPool : Resource
 {
 	// [Export]
-	public List<PortalProjectile> PortalsPool = new List<PortalProjectile>();
+	public List<PortalProjectile> PortalProjectilesPool = new List<PortalProjectile>();
+
+	public List<Portal> AvailablePortals { get; set; } = new List<Portal>();
 
 
 
 	// Member Methods------------------------------------------------------------------------------
 
-	public PortalProjectile GetPortalFromPool()
+	public PortalProjectile GetPortalProjectileFromPool()
 	{
-		GD.Print($"Number of items in the pool: {PortalsPool.Count}");
-		foreach (var projectile in PortalsPool)
+		GD.Print($"Number of items in the pool: {PortalProjectilesPool.Count}");
+		foreach (var projectile in PortalProjectilesPool)
 		{
 			if (projectile.Visible == false)
 			{
 				SetNodeActiveState<PortalProjectile>(projectile, true);
-				PortalsPool.Remove(projectile);
+				PortalProjectilesPool.Remove(projectile);
 				return projectile;
 			}
 		}
@@ -29,6 +31,32 @@ public partial class SharedPool : Resource
 		GD.PrintErr("Can't fetch from the pool");
 		return null;
 	}
+
+
+	public Portal GetPortalFromPool(PortalType portalType)
+	{
+		GD.Print($"Number of items in the pool: {PortalProjectilesPool.Count}");
+		foreach (var portal in AvailablePortals)
+		{
+			if (portalType == PortalType.Blue)
+			{
+				SetNodeActiveState<Portal>(portal, true);
+				// AvailablePortals.Remove(portal);
+				return portal as BluePortal;
+			}
+			else
+			{
+				SetNodeActiveState<Portal>(portal, true);
+				// AvailablePortals.Remove(portal);
+				return portal as OrangePortal;
+			}
+		}
+
+		GD.PrintErr("Can't fetch from the pool");
+		return null;
+	}
+
+	
 
 
 	/// <summary>

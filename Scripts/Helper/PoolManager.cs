@@ -1,5 +1,6 @@
 using Godot;
 using Portal2_5D.Scripts.Objects;
+using PortalD2.D.Scripts.Objects;
 using System;
 
 namespace Portal2_5D.Scripts.Helper;
@@ -18,6 +19,10 @@ public partial class PoolManager : Node
 	[Export]
 	public PackedScene PortalProjectileScene { get; private set; }
 
+	[Export]
+	public PackedScene[] PortalsScenes { get; private set; }
+
+
 	private const int POOL_COUNT = 4;
 
 
@@ -27,6 +32,7 @@ public partial class PoolManager : Node
     public override void _Ready()
     {
         SetProjectilePool();
+		SetPortalsPool();
     }
     // Member Methods------------------------------------------------------------------------------
 
@@ -46,18 +52,24 @@ public partial class PoolManager : Node
 			// DeactivateNode<PortalProjectile>(newProjectile);
 			SharedResources.GameManager.CallDeferred(MethodName.AddChild, newProjectile);
 
-			SharedPool.AddToPool<PortalProjectile>(newProjectile, SharedPool.PortalsPool);
+			SharedPool.AddToPool<PortalProjectile>(newProjectile, SharedPool.PortalProjectilesPool);
 		}
 	}
-
-
+	
+	
 	/// <summary>
-	/// Deactivate the node before storing it in the pool
+	/// Add the portals to the portals pool in the shared pool resource
 	/// </summary>
-	private void DeactivateNode<T>(T node) where T : Node3D
+	private void SetPortalsPool()
 	{
-		node.Visible = false;
-		node.SetProcess(false);
-		node.SetPhysicsProcess(false);
+		Portal newPortal;
+
+		foreach (var portal in PortalsScenes)
+		{
+			newPortal = portal.Instantiate() as Portal;
+
+			SharedResources.GameManager.CallDeferred(MethodName.AddChild, newPortal);
+			SharedPool.AddToPool<Portal>(newPortal, SharedPool.AvailablePortals);
+		}
 	}
 }

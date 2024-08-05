@@ -1,7 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://buf01p84y6q84"]
+[gd_scene load_steps=3 format=3 uid="uid://buf01p84y6q84"]
 
 [ext_resource type="PackedScene" uid="uid://bkm88bte371s1" path="res://Scenes/Environment/blue_portal_visual.tscn" id="1_16q48"]
+[ext_resource type="Script" path="res://Scripts/Objects/BluePortal.cs" id="3_cl5al"]
 
 [node name="BluePortal" type="Node3D"]
+script = ExtResource("3_cl5al")
 
 [node name="BluePortal" parent="." instance=ExtResource("1_16q48")]

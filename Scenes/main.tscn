@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b0vsbyx8cj0tu"]
+[gd_scene load_steps=11 format=3 uid="uid://b0vsbyx8cj0tu"]
 
 [ext_resource type="PackedScene" uid="uid://dxpkta83txyqn" path="res://Scenes/Characters/emy.tscn" id="1_egwbq"]
 [ext_resource type="Script" path="res://Scripts/GameManager.cs" id="1_g2qau"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://b1tse6e4yy5um" path="res://Scenes/Objects/portal_projectile.tscn" id="6_mk164"]
 [ext_resource type="Script" path="res://Scripts/Helper/PoolManager.cs" id="7_54ufv"]
 [ext_resource type="Resource" uid="uid://cqkpia02hlqvs" path="res://Scripts/Resources/shared_pool.tres" id="8_op3h1"]
+[ext_resource type="PackedScene" uid="uid://buf01p84y6q84" path="res://Scenes/Environment/blue_portal.tscn" id="9_paxhn"]
+[ext_resource type="PackedScene" uid="uid://byt28681x42ov" path="res://Scenes/Environment/orange_portal.tscn" id="10_n8q21"]
 
 [node name="Main" type="Node3D" node_paths=PackedStringArray("Camera")]
 script = ExtResource("1_g2qau")
@@ -36,3 +38,4 @@ script = ExtResource("7_54ufv")
 SharedResources = ExtResource("2_ep1ny")
 SharedPool = ExtResource("8_op3h1")
 PortalProjectileScene = ExtResource("6_mk164")
+PortalsScenes = Array[PackedScene]([ExtResource("9_paxhn"), ExtResource("10_n8q21")])
