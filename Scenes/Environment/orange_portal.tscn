@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://byt28681x42ov"]
+[gd_scene load_steps=6 format=3 uid="uid://byt28681x42ov"]
 
 [ext_resource type="Shader" uid="uid://dcsawj35pvs11" path="res://Shaders/portal.tres" id="1_fnc0f"]
 [ext_resource type="Texture2D" uid="uid://da4e16a7uja2c" path="res://Assets/DefaultParticleReplacement.png" id="2_xttvt"]
+[ext_resource type="Script" path="res://Scripts/Objects/OrangePortal.cs" id="3_2bexc"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_53cs8"]
 render_priority = 0
@@ -23,3 +24,4 @@ orientation = 0
 [node name="OrangePortal" type="MeshInstance3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00394201, 1, 0.0156374)
 mesh = SubResource("PlaneMesh_odmng")
+script = ExtResource("3_2bexc")

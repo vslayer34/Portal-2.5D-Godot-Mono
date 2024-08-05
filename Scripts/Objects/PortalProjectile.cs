@@ -9,6 +9,9 @@ public partial class PortalProjectile : Area3D
 	[Export]
 	public SharedPool SharedPool { get; private set; }
 
+	[Export]
+	public Timer DisableSelfTimer { get; private set; }
+
 	[ExportCategory("")]
 	
 	[ExportGroup("Required Materials")]
@@ -22,6 +25,12 @@ public partial class PortalProjectile : Area3D
 
 
     // Game Loop Methods---------------------------------------------------------------------------
+
+    public override void _Ready()
+    {
+        DisableSelfTimer.Timeout += DisableSelfTimer_Timeout;
+		BodyEntered += Projectile_BodyEntered;
+    }
 
     public override void _PhysicsProcess(double delta)
     {
@@ -38,6 +47,22 @@ public partial class PortalProjectile : Area3D
     public void SetPortalType(PortalType portalType)
 	{
 		_portalType = portalType;
+		DisableSelfTimer.Start();
 		// GlobalPosition
+	}
+
+	// Signal Methods------------------------------------------------------------------------------
+
+	private void DisableSelfTimer_Timeout()
+	{
+		SharedPool.AddToPool(this, SharedPool.PortalsPool);
+	}
+
+	private void Projectile_BodyEntered(Node3D area)
+	{
+		if (area is PortableWall wall)
+		{
+			GD.Print("Hit a portable wall");
+		}
 	}
 }

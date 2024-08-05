@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://clhnvh3obp4sd"]
+[gd_scene load_steps=4 format=3 uid="uid://clhnvh3obp4sd"]
+
+[ext_resource type="Script" path="res://Scripts/Objects/PortableWall.cs" id="1_smfjt"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_5kyu0"]
 orientation = 0
@@ -7,6 +9,7 @@ orientation = 0
 size = Vector3(0.0314941, 2.03296, 1.97559)
 
 [node name="TestWallSection" type="StaticBody3D"]
+script = ExtResource("1_smfjt")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

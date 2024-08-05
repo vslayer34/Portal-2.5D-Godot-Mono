@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://b1tse6e4yy5um"]
+[gd_scene load_steps=11 format=3 uid="uid://b1tse6e4yy5um"]
 
 [ext_resource type="Script" path="res://Scripts/Objects/PortalProjectile.cs" id="1_aoi6e"]
+[ext_resource type="Resource" uid="uid://cqkpia02hlqvs" path="res://Scripts/Resources/shared_pool.tres" id="2_hwk6f"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b3qwx"]
 albedo_color = Color(0.984375, 0, 0, 1)
@@ -44,8 +45,10 @@ size = 5.0
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_w45vi"]
 
-[node name="PortalProjectile" type="Area3D" node_paths=PackedStringArray("ProjectileMaterial")]
+[node name="PortalProjectile" type="Area3D" node_paths=PackedStringArray("DisableSelfTimer", "ProjectileMaterial")]
 script = ExtResource("1_aoi6e")
+SharedPool = ExtResource("2_hwk6f")
+DisableSelfTimer = NodePath("Timer")
 ProjectileMaterial = NodePath("MeshInstance3D")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
@@ -63,3 +66,7 @@ draw_pass_1 = SubResource("RibbonTrailMesh_b54vg")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_w45vi")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
