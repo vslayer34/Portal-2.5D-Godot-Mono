@@ -43,9 +43,8 @@ public partial class PortalGun : Node3D
 		_newProjectile = SharedPool.GetPortalProjectileFromPool();
 		_newProjectile.SetPortalType(portalType);
 
-		// _newProjectile.GlobalPosition = LaunchPoint.GlobalPosition;
 		_newProjectile.GlobalTransform = LaunchPoint.GlobalTransform;
-		// _newProjectile.GlobalPosition = LaunchPoint.GlobalPosition;
+		
 		// switch (_portalType)
 		// {
 		// 	case PortalType.Blue:

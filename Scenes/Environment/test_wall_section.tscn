@@ -8,13 +8,17 @@ orientation = 0
 [sub_resource type="BoxShape3D" id="BoxShape3D_jtcj5"]
 size = Vector3(0.0314941, 2.03296, 1.97559)
 
-[node name="TestWallSection" type="StaticBody3D"]
+[node name="TestWallSection" type="StaticBody3D" node_paths=PackedStringArray("PortalParent")]
 script = ExtResource("1_smfjt")
+PortalParent = NodePath("PortalArea")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 2.1602, 0, 0, 0, 1.98781, 0, 2.19092, 0)
 mesh = SubResource("PlaneMesh_5kyu0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("BoxShape3D_jtcj5")
+
+[node name="PortalArea" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0923517, 2.25895, 0)

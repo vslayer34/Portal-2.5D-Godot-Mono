@@ -16,7 +16,7 @@ public partial class PortalProjectile : Area3D
 	
 	[ExportGroup("Required Materials")]
 	[Export]
-	public MeshInstance3D ProjectileMaterial { get; private set; }
+	public StandardMaterial3D ProjectileMaterial { get; private set; }
 
 	private PortalType _portalType;
 
@@ -48,7 +48,15 @@ public partial class PortalProjectile : Area3D
 	{
 		_portalType = portalType;
 		DisableSelfTimer.Start();
-		// GlobalPosition
+
+		if (_portalType == PortalType.Blue)
+		{
+			ProjectileMaterial.AlbedoColor = Colors.Blue;
+		}
+		else
+		{
+			ProjectileMaterial.AlbedoColor = Colors.Orange;
+		}
 	}
 
 	// Signal Methods------------------------------------------------------------------------------
