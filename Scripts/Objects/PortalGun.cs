@@ -45,7 +45,7 @@ public partial class PortalGun : Node3D
 
     public async void ShootPortal(PortalType portalType)
 	{
-		const float PORTAL_FORMATION_TIME = 0.5f;
+		const float PORTAL_FORMATION_TIME = 0.2f;
 
 		if (portalType == PortalType.Orange)
 		{

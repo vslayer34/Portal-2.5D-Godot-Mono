@@ -86,7 +86,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.810205)
 [node name="PortalFormationParticle" type="GPUParticles3D" parent="LaunchPoint"]
 emitting = false
 amount = 1
-lifetime = 0.5
+lifetime = 0.2
 one_shot = true
 process_material = SubResource("ParticleProcessMaterial_nplgh")
 draw_pass_1 = SubResource("SphereMesh_2b0cw")
