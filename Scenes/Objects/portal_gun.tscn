@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://dt37dq5uact7m"]
+[gd_scene load_steps=16 format=3 uid="uid://dt37dq5uact7m"]
 
 [ext_resource type="Script" path="res://Scripts/Objects/PortalGun.cs" id="1_mo412"]
 [ext_resource type="Resource" uid="uid://dvabtcoe3ob2c" path="res://Scripts/Resources/shared_events.tres" id="2_b2gvp"]
 [ext_resource type="Resource" uid="uid://cqkpia02hlqvs" path="res://Scripts/Resources/shared_pool.tres" id="3_8nlst"]
 [ext_resource type="PackedScene" uid="uid://5dugfglor3a2" path="res://Assets/Portal Gun/portal gun.glb" id="4_62hno"]
+[ext_resource type="Material" uid="uid://c7x3u14meikwd" path="res://Scenes/Objects/Materials/portal_gun_particle_mat.tres" id="4_y2a58"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iohbf"]
 albedo_color = Color(0.30307, 0.0573578, 0.699219, 1)
@@ -23,11 +24,31 @@ albedo_color = Color(0.0856934, 0.914062, 0.137466, 1)
 [sub_resource type="PrismMesh" id="PrismMesh_gv7gf"]
 material = SubResource("StandardMaterial3D_pfddx")
 
-[node name="Portal Gun" type="Node3D" node_paths=PackedStringArray("LaunchPoint")]
+[sub_resource type="Curve" id="Curve_bfbso"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_7exkj"]
+curve = SubResource("Curve_bfbso")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_nplgh"]
+gravity = Vector3(0, 0, 0)
+scale_min = 1.5
+scale_max = 1.5
+scale_curve = SubResource("CurveTexture_7exkj")
+
+[sub_resource type="SphereMesh" id="SphereMesh_2b0cw"]
+material = ExtResource("4_y2a58")
+radius = 0.1
+height = 0.2
+
+[node name="Portal Gun" type="Node3D" node_paths=PackedStringArray("LaunchPoint", "PortalFormationParticle")]
 script = ExtResource("1_mo412")
 SharedEvents = ExtResource("2_b2gvp")
 SharedPool = ExtResource("3_8nlst")
 LaunchPoint = NodePath("LaunchPoint")
+PortalFormationParticle = NodePath("LaunchPoint/PortalFormationParticle")
+PortalGunParticleMaterial = ExtResource("4_y2a58")
 
 [node name="Main Body" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.254093, 0, 0, 0, -2.18557e-08, -0.25, 0, 0.5, -1.09278e-08, 0, 0, 0)
@@ -61,5 +82,13 @@ skeleton = NodePath("../..")
 
 [node name="LaunchPoint" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.810205)
+
+[node name="PortalFormationParticle" type="GPUParticles3D" parent="LaunchPoint"]
+emitting = false
+amount = 1
+lifetime = 0.5
+one_shot = true
+process_material = SubResource("ParticleProcessMaterial_nplgh")
+draw_pass_1 = SubResource("SphereMesh_2b0cw")
 
 [node name="portal gun" parent="." instance=ExtResource("4_62hno")]

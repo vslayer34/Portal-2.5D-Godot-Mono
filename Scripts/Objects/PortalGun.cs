@@ -6,7 +6,7 @@ using System;
 namespace Portal2_5D.Scripts.Objects;
 public partial class PortalGun : Node3D
 {
-	[ExportGroup("Required Nodes")]	
+	[ExportGroup("Required Nodes")]
 	[Export]
 	public GameSharedEvents SharedEvents { get; private set; }
 
@@ -16,6 +16,12 @@ public partial class PortalGun : Node3D
 
 	[Export]
 	public Node3D LaunchPoint { get; private set; }
+
+	[Export]
+	public GpuParticles3D PortalFormationParticle { get; private set; }
+
+	[Export]
+	public StandardMaterial3D PortalGunParticleMaterial { get; private set; }
 	
 	private PortalType _portalType;
 	private PortalProjectile _newProjectile;
@@ -37,8 +43,20 @@ public partial class PortalGun : Node3D
     }
     // Mebmer Methods------------------------------------------------------------------------------
 
-    public void ShootPortal(PortalType portalType)
+    public async void ShootPortal(PortalType portalType)
 	{
+		const float PORTAL_FORMATION_TIME = 0.5f;
+
+		if (portalType == PortalType.Orange)
+		{
+			PortalGunParticleMaterial.AlbedoColor = Colors.Orange;
+		}
+		else
+		{
+			PortalGunParticleMaterial.AlbedoColor = Colors.Blue;
+		}
+		PortalFormationParticle.Emitting = true;
+		await ToSignal(GetTree().CreateTimer(PORTAL_FORMATION_TIME), Timer.SignalName.Timeout);
 		// RayCastOrigin.
 		_newProjectile = SharedPool.GetPortalProjectileFromPool();
 		_newProjectile.SetPortalType(portalType);
