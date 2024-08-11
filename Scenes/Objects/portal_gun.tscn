@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://dt37dq5uact7m"]
+[gd_scene load_steps=11 format=3 uid="uid://dt37dq5uact7m"]
 
 [ext_resource type="Script" path="res://Scripts/Objects/PortalGun.cs" id="1_mo412"]
 [ext_resource type="Resource" uid="uid://dvabtcoe3ob2c" path="res://Scripts/Resources/shared_events.tres" id="2_b2gvp"]
 [ext_resource type="Resource" uid="uid://cqkpia02hlqvs" path="res://Scripts/Resources/shared_pool.tres" id="3_8nlst"]
+[ext_resource type="PackedScene" uid="uid://5dugfglor3a2" path="res://Assets/Portal Gun/portal gun.glb" id="4_62hno"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iohbf"]
 albedo_color = Color(0.30307, 0.0573578, 0.699219, 1)
@@ -30,6 +31,7 @@ LaunchPoint = NodePath("LaunchPoint")
 
 [node name="Main Body" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.254093, 0, 0, 0, -2.18557e-08, -0.25, 0, 0.5, -1.09278e-08, 0, 0, 0)
+visible = false
 mesh = SubResource("CylinderMesh_imai5")
 
 [node name="Main Body2" type="MeshInstance3D" parent="Main Body"]
@@ -59,3 +61,5 @@ skeleton = NodePath("../..")
 
 [node name="LaunchPoint" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.810205)
+
+[node name="portal gun" parent="." instance=ExtResource("4_62hno")]
