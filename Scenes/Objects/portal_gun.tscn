@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://Scripts/Objects/PortalGun.cs" id="1_mo412"]
 [ext_resource type="Resource" uid="uid://dvabtcoe3ob2c" path="res://Scripts/Resources/shared_events.tres" id="2_b2gvp"]
 [ext_resource type="Resource" uid="uid://cqkpia02hlqvs" path="res://Scripts/Resources/shared_pool.tres" id="3_8nlst"]
-[ext_resource type="PackedScene" uid="uid://5dugfglor3a2" path="res://Assets/Portal Gun/portal gun.glb" id="4_62hno"]
 [ext_resource type="Material" uid="uid://c7x3u14meikwd" path="res://Scenes/Objects/Materials/portal_gun_particle_mat.tres" id="4_y2a58"]
+[ext_resource type="PackedScene" uid="uid://baq51abkikjxy" path="res://Scenes/Models/portal_gun_mesh.tscn" id="5_lc1v0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iohbf"]
 albedo_color = Color(0.30307, 0.0573578, 0.699219, 1)
@@ -91,4 +91,4 @@ one_shot = true
 process_material = SubResource("ParticleProcessMaterial_nplgh")
 draw_pass_1 = SubResource("SphereMesh_2b0cw")
 
-[node name="portal gun" parent="." instance=ExtResource("4_62hno")]
+[node name="portal gun2" parent="." instance=ExtResource("5_lc1v0")]
