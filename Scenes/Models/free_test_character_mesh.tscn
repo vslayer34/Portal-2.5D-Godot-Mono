@@ -1,9 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://6cbxr1axc7w2"]
 
 [ext_resource type="PackedScene" uid="uid://dsj3wwj4n5ooj" path="res://Assets/Characters/FreeTestCharacterAsuna/FBX/FreeTestCharacterAsuna/FreeTestCharacterAsuna.fbx" id="1_3n2v7"]
-[ext_resource type="Material" uid="uid://dn4qaxt41i85l" path="res://Assets/Characters/FreeTestCharacterAsuna/Materials/Body/asuna_body_black_mat.tres" id="2_2mpsl"]
+[ext_resource type="Material" uid="uid://dn4qaxt41i85l" path="res://Assets/Characters/FreeTestCharacterAsuna/Materials/Body/asuna_body_blue_mat.tres" id="2_0mjr3"]
 
 [node name="Root Scene" instance=ExtResource("1_3n2v7")]
 
+[node name="BodyMesh" parent="RootNode/Root/Skeleton3D" index="0"]
+surface_material_override/0 = ExtResource("2_0mjr3")
+
 [node name="AsunaBoots" parent="RootNode/Root/Skeleton3D" index="1"]
-surface_material_override/0 = ExtResource("2_2mpsl")
+surface_material_override/0 = ExtResource("2_0mjr3")
