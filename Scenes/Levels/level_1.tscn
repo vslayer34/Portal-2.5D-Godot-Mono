@@ -1,3 +1,7 @@
-[gd_scene format=3 uid="uid://cmpven28oi438"]
+[gd_scene load_steps=2 format=3 uid="uid://cmpven28oi438"]
+
+[ext_resource type="PackedScene" uid="uid://dxpkta83txyqn" path="res://Scenes/Characters/emy.tscn" id="1_i2bhn"]
 
 [node name="Level1" type="Node3D"]
+
+[node name="Emy" parent="." instance=ExtResource("1_i2bhn")]
