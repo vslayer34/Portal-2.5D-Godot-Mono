@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dvpw5cmga0aa5"
-path="res://.godot/imported/ScifiRifleWLT78Receiver.fbx-478fb002a3147243080797e505cc668b.scn"
+path="res://.godot/imported/ScifiRifleWLT78Receiver.fbx-670ed9df9e3dc95c9ba6f61814f803a0.scn"
 
 [deps]
 
-source_file="res://Assets/FreeTestCharacterAsuna/FBX/CharacterStandardEquipment/ScifiRifleWLT78Receiver.fbx"
-dest_files=["res://.godot/imported/ScifiRifleWLT78Receiver.fbx-478fb002a3147243080797e505cc668b.scn"]
+source_file="res://Assets/Characters/FreeTestCharacterAsuna/FBX/CharacterStandardEquipment/ScifiRifleWLT78Receiver.fbx"
+dest_files=["res://.godot/imported/ScifiRifleWLT78Receiver.fbx-670ed9df9e3dc95c9ba6f61814f803a0.scn"]
 
 [params]
 

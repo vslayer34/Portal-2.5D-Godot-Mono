@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://do3ongb0tl0p4"
-path="res://.godot/imported/DefaultFemaleHairAlbedoWhiteAlpha.tga-f429c252fc19770469d0ab52d72613a4.ctex"
+path="res://.godot/imported/DefaultFemaleHairAlbedoWhiteAlpha.tga-41f5e4bbef99663281f822af5997c920.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/FreeTestCharacterAsuna/Textures/DefaultFemaleHair/DefaultFemaleHairAlbedoWhiteAlpha.tga"
-dest_files=["res://.godot/imported/DefaultFemaleHairAlbedoWhiteAlpha.tga-f429c252fc19770469d0ab52d72613a4.ctex"]
+source_file="res://Assets/Characters/FreeTestCharacterAsuna/Textures/DefaultFemaleHair/DefaultFemaleHairAlbedoWhiteAlpha.tga"
+dest_files=["res://.godot/imported/DefaultFemaleHairAlbedoWhiteAlpha.tga-41f5e4bbef99663281f822af5997c920.ctex"]
 
 [params]
 

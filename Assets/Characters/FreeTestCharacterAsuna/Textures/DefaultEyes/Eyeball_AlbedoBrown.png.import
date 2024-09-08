@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://0vbmx2qw8d7"
-path="res://.godot/imported/Eyeball_AlbedoBrown.png-17b20946a48f0cd77c35a4da1de82e21.ctex"
+path="res://.godot/imported/Eyeball_AlbedoBrown.png-0bc2f030a04b27e0d070b98e4b5ee4ff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/FreeTestCharacterAsuna/Textures/DefaultEyes/Eyeball_AlbedoBrown.png"
-dest_files=["res://.godot/imported/Eyeball_AlbedoBrown.png-17b20946a48f0cd77c35a4da1de82e21.ctex"]
+source_file="res://Assets/Characters/FreeTestCharacterAsuna/Textures/DefaultEyes/Eyeball_AlbedoBrown.png"
+dest_files=["res://.godot/imported/Eyeball_AlbedoBrown.png-0bc2f030a04b27e0d070b98e4b5ee4ff.ctex"]
 
 [params]
 

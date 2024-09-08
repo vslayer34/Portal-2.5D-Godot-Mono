@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dcgxymuob2fgv"
-path="res://.godot/imported/9x19mmCartridge.fbx-fd18a8ed6f719c6e7c27fb896e3c4cf4.scn"
+path="res://.godot/imported/9x19mmCartridge.fbx-4bc6d9d4d3e50c5ed45ea45fa5eb328f.scn"
 
 [deps]
 
-source_file="res://Assets/FreeTestCharacterAsuna/FBX/CharacterStandardAmmunition/9x19mmCartridge.fbx"
-dest_files=["res://.godot/imported/9x19mmCartridge.fbx-fd18a8ed6f719c6e7c27fb896e3c4cf4.scn"]
+source_file="res://Assets/Characters/FreeTestCharacterAsuna/FBX/CharacterStandardAmmunition/9x19mmCartridge.fbx"
+dest_files=["res://.godot/imported/9x19mmCartridge.fbx-4bc6d9d4d3e50c5ed45ea45fa5eb328f.scn"]
 
 [params]
 

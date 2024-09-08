@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://i4vlq3n7hhfd"
-path="res://.godot/imported/ScifiHolsterTopCover.fbx-c45f544ee0aeb4eea0fe56de7a2455fe.scn"
+path="res://.godot/imported/ScifiHolsterTopCover.fbx-f9773477307a1768339334e419c11257.scn"
 
 [deps]
 
-source_file="res://Assets/FreeTestCharacterAsuna/FBX/CharacterStandardEquipment/ScifiHolsterTopCover.fbx"
-dest_files=["res://.godot/imported/ScifiHolsterTopCover.fbx-c45f544ee0aeb4eea0fe56de7a2455fe.scn"]
+source_file="res://Assets/Characters/FreeTestCharacterAsuna/FBX/CharacterStandardEquipment/ScifiHolsterTopCover.fbx"
+dest_files=["res://.godot/imported/ScifiHolsterTopCover.fbx-f9773477307a1768339334e419c11257.scn"]
 
 [params]
 

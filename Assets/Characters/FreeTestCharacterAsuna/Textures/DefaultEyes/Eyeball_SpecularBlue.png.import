@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c5hrwv1lbemev"
-path="res://.godot/imported/Eyeball_SpecularBlue.png-0e5f5985fd74a89ff9790e2b4548d865.ctex"
+path="res://.godot/imported/Eyeball_SpecularBlue.png-3d782af4134a467ffcc52a8a5a6c5b38.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/FreeTestCharacterAsuna/Textures/DefaultEyes/Eyeball_SpecularBlue.png"
-dest_files=["res://.godot/imported/Eyeball_SpecularBlue.png-0e5f5985fd74a89ff9790e2b4548d865.ctex"]
+source_file="res://Assets/Characters/FreeTestCharacterAsuna/Textures/DefaultEyes/Eyeball_SpecularBlue.png"
+dest_files=["res://.godot/imported/Eyeball_SpecularBlue.png-3d782af4134a467ffcc52a8a5a6c5b38.ctex"]
 
 [params]
 

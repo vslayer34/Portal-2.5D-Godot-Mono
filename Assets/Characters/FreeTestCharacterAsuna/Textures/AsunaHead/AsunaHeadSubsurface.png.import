@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://1qb4fvd7ywmc"
-path="res://.godot/imported/AsunaHeadSubsurface.png-2c789975ec68a6ca964ff9e3070ae947.ctex"
+path="res://.godot/imported/AsunaHeadSubsurface.png-d8157224258a92ef19514b37f28331b5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/FreeTestCharacterAsuna/Textures/AsunaHead/AsunaHeadSubsurface.png"
-dest_files=["res://.godot/imported/AsunaHeadSubsurface.png-2c789975ec68a6ca964ff9e3070ae947.ctex"]
+source_file="res://Assets/Characters/FreeTestCharacterAsuna/Textures/AsunaHead/AsunaHeadSubsurface.png"
+dest_files=["res://.godot/imported/AsunaHeadSubsurface.png-d8157224258a92ef19514b37f28331b5.ctex"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dsj3wwj4n5ooj"
-path="res://.godot/imported/FreeTestCharacterAsuna.fbx-43507e7d4787eeec286f8f70a09bcbc7.scn"
+path="res://.godot/imported/FreeTestCharacterAsuna.fbx-b042ec5ba40edaf91501348e346b33b2.scn"
 
 [deps]
 
-source_file="res://Assets/FreeTestCharacterAsuna/FBX/FreeTestCharacterAsuna/FreeTestCharacterAsuna.fbx"
-dest_files=["res://.godot/imported/FreeTestCharacterAsuna.fbx-43507e7d4787eeec286f8f70a09bcbc7.scn"]
+source_file="res://Assets/Characters/FreeTestCharacterAsuna/FBX/FreeTestCharacterAsuna/FreeTestCharacterAsuna.fbx"
+dest_files=["res://.godot/imported/FreeTestCharacterAsuna.fbx-b042ec5ba40edaf91501348e346b33b2.scn"]
 
 [params]
 

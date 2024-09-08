@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dcfw7t8siabah"
-path="res://.godot/imported/AsunaArmorKneeLeft.fbx-f0f7a0cc23c324e80b96465b76edd719.scn"
+path="res://.godot/imported/AsunaArmorKneeLeft.fbx-16ea630ac10ab5347915af028860f06e.scn"
 
 [deps]
 
-source_file="res://Assets/FreeTestCharacterAsuna/FBX/AsunaArmor/AsunaArmorKneeLeft.fbx"
-dest_files=["res://.godot/imported/AsunaArmorKneeLeft.fbx-f0f7a0cc23c324e80b96465b76edd719.scn"]
+source_file="res://Assets/Characters/FreeTestCharacterAsuna/FBX/AsunaArmor/AsunaArmorKneeLeft.fbx"
+dest_files=["res://.godot/imported/AsunaArmorKneeLeft.fbx-16ea630ac10ab5347915af028860f06e.scn"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b0qydxckgvkc7"
-path="res://.godot/imported/023OneHandMeleeWeapon.fbx-310f4415412bf6300fcfb0df80354d98.scn"
+path="res://.godot/imported/023OneHandMeleeWeapon.fbx-c56c1d4da690b6705b70c4129a5dbec6.scn"
 
 [deps]
 
-source_file="res://Assets/FreeTestCharacterAsuna/FBX/Animations/023OneHandMeleeWeapon.fbx"
-dest_files=["res://.godot/imported/023OneHandMeleeWeapon.fbx-310f4415412bf6300fcfb0df80354d98.scn"]
+source_file="res://Assets/Characters/FreeTestCharacterAsuna/FBX/Animations/023OneHandMeleeWeapon.fbx"
+dest_files=["res://.godot/imported/023OneHandMeleeWeapon.fbx-c56c1d4da690b6705b70c4129a5dbec6.scn"]
 
 [params]
 

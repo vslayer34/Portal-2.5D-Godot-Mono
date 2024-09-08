@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b4po1hyvaqwir"
-path="res://.godot/imported/002Walk.fbx-b838b1abac2dce1bf8bcab822e3149f8.scn"
+path="res://.godot/imported/002Walk.fbx-e8a95e01d75f28f7e2e8fee51521ba6d.scn"
 
 [deps]
 
-source_file="res://Assets/FreeTestCharacterAsuna/FBX/Animations/002Walk.fbx"
-dest_files=["res://.godot/imported/002Walk.fbx-b838b1abac2dce1bf8bcab822e3149f8.scn"]
+source_file="res://Assets/Characters/FreeTestCharacterAsuna/FBX/Animations/002Walk.fbx"
+dest_files=["res://.godot/imported/002Walk.fbx-e8a95e01d75f28f7e2e8fee51521ba6d.scn"]
 
 [params]
 

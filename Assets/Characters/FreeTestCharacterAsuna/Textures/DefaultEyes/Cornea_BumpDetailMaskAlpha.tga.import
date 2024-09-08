@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://qafm55jjswll"
-path="res://.godot/imported/Cornea_BumpDetailMaskAlpha.tga-d0c4467b2b955b3672f8f54d4f75ab5b.ctex"
+path="res://.godot/imported/Cornea_BumpDetailMaskAlpha.tga-82a453e0ff9c61d64ab137c2ef63ee21.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/FreeTestCharacterAsuna/Textures/DefaultEyes/Cornea_BumpDetailMaskAlpha.tga"
-dest_files=["res://.godot/imported/Cornea_BumpDetailMaskAlpha.tga-d0c4467b2b955b3672f8f54d4f75ab5b.ctex"]
+source_file="res://Assets/Characters/FreeTestCharacterAsuna/Textures/DefaultEyes/Cornea_BumpDetailMaskAlpha.tga"
+dest_files=["res://.godot/imported/Cornea_BumpDetailMaskAlpha.tga-82a453e0ff9c61d64ab137c2ef63ee21.ctex"]
 
 [params]
 

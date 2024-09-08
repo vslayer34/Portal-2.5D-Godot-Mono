@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://umkrsy0b2jo2"
-path="res://.godot/imported/011Rifle.fbx-1927f126adbc29f7573db728f6466bb5.scn"
+path="res://.godot/imported/011Rifle.fbx-bd8f98a0bca5d93bf43f5c113d576eee.scn"
 
 [deps]
 
-source_file="res://Assets/FreeTestCharacterAsuna/FBX/Animations/011Rifle.fbx"
-dest_files=["res://.godot/imported/011Rifle.fbx-1927f126adbc29f7573db728f6466bb5.scn"]
+source_file="res://Assets/Characters/FreeTestCharacterAsuna/FBX/Animations/011Rifle.fbx"
+dest_files=["res://.godot/imported/011Rifle.fbx-bd8f98a0bca5d93bf43f5c113d576eee.scn"]
 
 [params]
 

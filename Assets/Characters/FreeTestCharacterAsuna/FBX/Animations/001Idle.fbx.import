@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bah7wke3hy4mq"
-path="res://.godot/imported/001Idle.fbx-19eee16696a6767f0e5753c656719fbd.scn"
+path="res://.godot/imported/001Idle.fbx-ea86b75afcecbe5e5b4a0d16c297d023.scn"
 
 [deps]
 
-source_file="res://Assets/FreeTestCharacterAsuna/FBX/Animations/001Idle.fbx"
-dest_files=["res://.godot/imported/001Idle.fbx-19eee16696a6767f0e5753c656719fbd.scn"]
+source_file="res://Assets/Characters/FreeTestCharacterAsuna/FBX/Animations/001Idle.fbx"
+dest_files=["res://.godot/imported/001Idle.fbx-ea86b75afcecbe5e5b4a0d16c297d023.scn"]
 
 [params]
 

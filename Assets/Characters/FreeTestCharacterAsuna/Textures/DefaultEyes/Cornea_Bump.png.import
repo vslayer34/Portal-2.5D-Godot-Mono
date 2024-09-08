@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://6hqv5v0gqcg4"
-path="res://.godot/imported/Cornea_Bump.png-fafa5657f26c2a0f34d3637c84829cd5.ctex"
+path="res://.godot/imported/Cornea_Bump.png-60feb2022829401ad5e3a33fea183900.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/FreeTestCharacterAsuna/Textures/DefaultEyes/Cornea_Bump.png"
-dest_files=["res://.godot/imported/Cornea_Bump.png-fafa5657f26c2a0f34d3637c84829cd5.ctex"]
+source_file="res://Assets/Characters/FreeTestCharacterAsuna/Textures/DefaultEyes/Cornea_Bump.png"
+dest_files=["res://.godot/imported/Cornea_Bump.png-60feb2022829401ad5e3a33fea183900.ctex"]
 
 [params]
 

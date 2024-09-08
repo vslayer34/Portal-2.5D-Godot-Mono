@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bjmt1cr5dlpyv"
-path="res://.godot/imported/DefaultFemaleHairAlpha.png-d2a20ede3b971fa2c570cee68536b3da.ctex"
+path="res://.godot/imported/DefaultFemaleHairAlpha.png-8fd12caffc6ca2f958e59d6e226da5eb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/FreeTestCharacterAsuna/Textures/DefaultFemaleHair/DefaultFemaleHairAlpha.png"
-dest_files=["res://.godot/imported/DefaultFemaleHairAlpha.png-d2a20ede3b971fa2c570cee68536b3da.ctex"]
+source_file="res://Assets/Characters/FreeTestCharacterAsuna/Textures/DefaultFemaleHair/DefaultFemaleHairAlpha.png"
+dest_files=["res://.godot/imported/DefaultFemaleHairAlpha.png-8fd12caffc6ca2f958e59d6e226da5eb.ctex"]
 
 [params]
 

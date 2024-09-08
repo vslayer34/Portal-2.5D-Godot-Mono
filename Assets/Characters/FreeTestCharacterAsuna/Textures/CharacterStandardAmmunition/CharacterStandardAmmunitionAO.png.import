@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b757f0ajwxiwj"
-path="res://.godot/imported/CharacterStandardAmmunitionAO.png-2bd76c3f6bafa81a8ce3b7b4e81fc5ed.ctex"
+path="res://.godot/imported/CharacterStandardAmmunitionAO.png-5e335c74da0889d1c074c3ee407d64d8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/FreeTestCharacterAsuna/Textures/CharacterStandardAmmunition/CharacterStandardAmmunitionAO.png"
-dest_files=["res://.godot/imported/CharacterStandardAmmunitionAO.png-2bd76c3f6bafa81a8ce3b7b4e81fc5ed.ctex"]
+source_file="res://Assets/Characters/FreeTestCharacterAsuna/Textures/CharacterStandardAmmunition/CharacterStandardAmmunitionAO.png"
+dest_files=["res://.godot/imported/CharacterStandardAmmunitionAO.png-5e335c74da0889d1c074c3ee407d64d8.ctex"]
 
 [params]
 

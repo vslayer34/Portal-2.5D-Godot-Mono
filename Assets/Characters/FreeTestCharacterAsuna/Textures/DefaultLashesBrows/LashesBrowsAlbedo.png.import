@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvsx2v17h232o"
-path="res://.godot/imported/LashesBrowsAlbedo.png-a7eaf3cc23dd52a17245463ddc7134cc.ctex"
+path="res://.godot/imported/LashesBrowsAlbedo.png-ce155aebb5de7c1a736f6a92e6850078.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/FreeTestCharacterAsuna/Textures/DefaultLashesBrows/LashesBrowsAlbedo.png"
-dest_files=["res://.godot/imported/LashesBrowsAlbedo.png-a7eaf3cc23dd52a17245463ddc7134cc.ctex"]
+source_file="res://Assets/Characters/FreeTestCharacterAsuna/Textures/DefaultLashesBrows/LashesBrowsAlbedo.png"
+dest_files=["res://.godot/imported/LashesBrowsAlbedo.png-ce155aebb5de7c1a736f6a92e6850078.ctex"]
 
 [params]
 

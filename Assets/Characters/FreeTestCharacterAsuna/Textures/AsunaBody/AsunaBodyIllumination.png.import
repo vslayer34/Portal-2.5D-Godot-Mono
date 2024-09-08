@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b7nsaf1t2br3b"
-path="res://.godot/imported/AsunaBodyIllumination.png-018cd515735958b17cacc6e4febfa67f.ctex"
+path="res://.godot/imported/AsunaBodyIllumination.png-ee7475a384dc20ab23cfd3b8575f1a9e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/FreeTestCharacterAsuna/Textures/AsunaBody/AsunaBodyIllumination.png"
-dest_files=["res://.godot/imported/AsunaBodyIllumination.png-018cd515735958b17cacc6e4febfa67f.ctex"]
+source_file="res://Assets/Characters/FreeTestCharacterAsuna/Textures/AsunaBody/AsunaBodyIllumination.png"
+dest_files=["res://.godot/imported/AsunaBodyIllumination.png-ee7475a384dc20ab23cfd3b8575f1a9e.ctex"]
 
 [params]
 

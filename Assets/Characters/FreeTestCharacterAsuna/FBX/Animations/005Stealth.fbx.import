@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://1cpvtqe2p1ir"
-path="res://.godot/imported/005Stealth.fbx-1a4c28ca36cb8df47dc5e47f9b04b908.scn"
+path="res://.godot/imported/005Stealth.fbx-6fa1617c0303c82f3476ada71a7f8cec.scn"
 
 [deps]
 
-source_file="res://Assets/FreeTestCharacterAsuna/FBX/Animations/005Stealth.fbx"
-dest_files=["res://.godot/imported/005Stealth.fbx-1a4c28ca36cb8df47dc5e47f9b04b908.scn"]
+source_file="res://Assets/Characters/FreeTestCharacterAsuna/FBX/Animations/005Stealth.fbx"
+dest_files=["res://.godot/imported/005Stealth.fbx-6fa1617c0303c82f3476ada71a7f8cec.scn"]
 
 [params]
 

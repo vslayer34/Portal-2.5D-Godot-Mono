@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c5dx45d16o1kt"
-path="res://.godot/imported/010Pistol.fbx-3deaa60a4414ae28149725bef15d74db.scn"
+path="res://.godot/imported/010Pistol.fbx-07ea30934c33bfbb8459cd554cab2e46.scn"
 
 [deps]
 
-source_file="res://Assets/FreeTestCharacterAsuna/FBX/Animations/010Pistol.fbx"
-dest_files=["res://.godot/imported/010Pistol.fbx-3deaa60a4414ae28149725bef15d74db.scn"]
+source_file="res://Assets/Characters/FreeTestCharacterAsuna/FBX/Animations/010Pistol.fbx"
+dest_files=["res://.godot/imported/010Pistol.fbx-07ea30934c33bfbb8459cd554cab2e46.scn"]
 
 [params]
 

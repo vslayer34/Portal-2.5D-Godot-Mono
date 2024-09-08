@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cl15vm8fo1bm2"
-path="res://.godot/imported/ScifiPistolMNL21Trigger.fbx-654e50bb77b804c1caf2a3347a5fa717.scn"
+path="res://.godot/imported/ScifiPistolMNL21Trigger.fbx-bcf9fc56e5e027b7e062bf798fcd492b.scn"
 
 [deps]
 
-source_file="res://Assets/FreeTestCharacterAsuna/FBX/CharacterStandardEquipment/ScifiPistolMNL21Trigger.fbx"
-dest_files=["res://.godot/imported/ScifiPistolMNL21Trigger.fbx-654e50bb77b804c1caf2a3347a5fa717.scn"]
+source_file="res://Assets/Characters/FreeTestCharacterAsuna/FBX/CharacterStandardEquipment/ScifiPistolMNL21Trigger.fbx"
+dest_files=["res://.godot/imported/ScifiPistolMNL21Trigger.fbx-bcf9fc56e5e027b7e062bf798fcd492b.scn"]
 
 [params]
 

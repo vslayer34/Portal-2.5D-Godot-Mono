@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cjuwb36hf5x7o"
-path="res://.godot/imported/CharacterStandardEquipmentAO.png-9cf1f392b463220fd8f2e5a831b0dd19.ctex"
+path="res://.godot/imported/CharacterStandardEquipmentAO.png-7db0ecaf333ea731d095cf835af41db6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/FreeTestCharacterAsuna/Textures/CharacterStandardEquipment/CharacterStandardEquipmentAO.png"
-dest_files=["res://.godot/imported/CharacterStandardEquipmentAO.png-9cf1f392b463220fd8f2e5a831b0dd19.ctex"]
+source_file="res://Assets/Characters/FreeTestCharacterAsuna/Textures/CharacterStandardEquipment/CharacterStandardEquipmentAO.png"
+dest_files=["res://.godot/imported/CharacterStandardEquipmentAO.png-7db0ecaf333ea731d095cf835af41db6.ctex"]
 
 [params]
 

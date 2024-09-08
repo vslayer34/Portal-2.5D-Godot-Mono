@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfhtijwjl3cbo"
-path="res://.godot/imported/LashesBrowsAlphaMasked.tga-f09fc6def0eae48b805e37e89726ae43.ctex"
+path="res://.godot/imported/LashesBrowsAlphaMasked.tga-77ae911f1c59ca3b3585125146e5dc8a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/FreeTestCharacterAsuna/Textures/DefaultLashesBrows/LashesBrowsAlphaMasked.tga"
-dest_files=["res://.godot/imported/LashesBrowsAlphaMasked.tga-f09fc6def0eae48b805e37e89726ae43.ctex"]
+source_file="res://Assets/Characters/FreeTestCharacterAsuna/Textures/DefaultLashesBrows/LashesBrowsAlphaMasked.tga"
+dest_files=["res://.godot/imported/LashesBrowsAlphaMasked.tga-77ae911f1c59ca3b3585125146e5dc8a.ctex"]
 
 [params]
 

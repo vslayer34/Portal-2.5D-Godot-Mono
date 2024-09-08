@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bk5kh7g7ttrx0"
-path="res://.godot/imported/022Unarmed.fbx-aed49b253c9fb76175241c630fc1a841.scn"
+path="res://.godot/imported/022Unarmed.fbx-564e9b24b2f0f13969dc1ed3480c283c.scn"
 
 [deps]
 
-source_file="res://Assets/FreeTestCharacterAsuna/FBX/Animations/022Unarmed.fbx"
-dest_files=["res://.godot/imported/022Unarmed.fbx-aed49b253c9fb76175241c630fc1a841.scn"]
+source_file="res://Assets/Characters/FreeTestCharacterAsuna/FBX/Animations/022Unarmed.fbx"
+dest_files=["res://.godot/imported/022Unarmed.fbx-564e9b24b2f0f13969dc1ed3480c283c.scn"]
 
 [params]
 

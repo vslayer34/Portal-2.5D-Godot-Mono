@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://5hjplhhx6xjy"
-path="res://.godot/imported/ScifiHolsterLegPlate.fbx-6193e625708c8ccf33f7211641aedc13.scn"
+path="res://.godot/imported/ScifiHolsterLegPlate.fbx-3c9709f095f8546ce1d5e994c8faced0.scn"
 
 [deps]
 
-source_file="res://Assets/FreeTestCharacterAsuna/FBX/CharacterStandardEquipment/ScifiHolsterLegPlate.fbx"
-dest_files=["res://.godot/imported/ScifiHolsterLegPlate.fbx-6193e625708c8ccf33f7211641aedc13.scn"]
+source_file="res://Assets/Characters/FreeTestCharacterAsuna/FBX/CharacterStandardEquipment/ScifiHolsterLegPlate.fbx"
+dest_files=["res://.godot/imported/ScifiHolsterLegPlate.fbx-3c9709f095f8546ce1d5e994c8faced0.scn"]
 
 [params]
 

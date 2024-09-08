@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c4odvf1dkx70x"
-path="res://.godot/imported/009Conversation.fbx-4d13b13f997fee548f3e2031244ddd08.scn"
+path="res://.godot/imported/009Conversation.fbx-b48767c6b6ef1fafa244d6ed3b0029a0.scn"
 
 [deps]
 
-source_file="res://Assets/FreeTestCharacterAsuna/FBX/Animations/009Conversation.fbx"
-dest_files=["res://.godot/imported/009Conversation.fbx-4d13b13f997fee548f3e2031244ddd08.scn"]
+source_file="res://Assets/Characters/FreeTestCharacterAsuna/FBX/Animations/009Conversation.fbx"
+dest_files=["res://.godot/imported/009Conversation.fbx-b48767c6b6ef1fafa244d6ed3b0029a0.scn"]
 
 [params]
 

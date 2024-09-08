@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cktm4lypqnqvx"
-path="res://.godot/imported/DefaultFemaleHairTranslucency.png-9ec5dad74223a0d99452bc7865deb9ee.ctex"
+path="res://.godot/imported/DefaultFemaleHairTranslucency.png-62802117c92633e739d7180dad77eab6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/FreeTestCharacterAsuna/Textures/DefaultFemaleHair/DefaultFemaleHairTranslucency.png"
-dest_files=["res://.godot/imported/DefaultFemaleHairTranslucency.png-9ec5dad74223a0d99452bc7865deb9ee.ctex"]
+source_file="res://Assets/Characters/FreeTestCharacterAsuna/Textures/DefaultFemaleHair/DefaultFemaleHairTranslucency.png"
+dest_files=["res://.godot/imported/DefaultFemaleHairTranslucency.png-62802117c92633e739d7180dad77eab6.ctex"]
 
 [params]
 

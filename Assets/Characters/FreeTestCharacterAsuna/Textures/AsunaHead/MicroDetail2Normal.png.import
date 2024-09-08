@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dej0x3srpan1h"
-path="res://.godot/imported/MicroDetail2Normal.png-435cac3d22e62a2bba8d465d71373f78.ctex"
+path="res://.godot/imported/MicroDetail2Normal.png-4bdeb21d0175b19a9696ee5e1937cacb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/FreeTestCharacterAsuna/Textures/AsunaHead/MicroDetail2Normal.png"
-dest_files=["res://.godot/imported/MicroDetail2Normal.png-435cac3d22e62a2bba8d465d71373f78.ctex"]
+source_file="res://Assets/Characters/FreeTestCharacterAsuna/Textures/AsunaHead/MicroDetail2Normal.png"
+dest_files=["res://.godot/imported/MicroDetail2Normal.png-4bdeb21d0175b19a9696ee5e1937cacb.ctex"]
 
 [params]
 
