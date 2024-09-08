@@ -1,0 +1,23 @@
+[gd_resource type="StandardMaterial3D" load_steps=7 format=3 uid="uid://5mmhqb7ag32m"]
+
+[ext_resource type="Texture2D" uid="uid://cqnebqfwh2lfj" path="res://Assets/Characters/FreeTestCharacterAsuna/Textures/DefaultFemaleHair/DefaultFemaleHairAlbedoBrownAlpha.tga" id="1_nlgmr"]
+[ext_resource type="Texture2D" uid="uid://dy5ynvnkwhwbx" path="res://Assets/Characters/FreeTestCharacterAsuna/Textures/DefaultFemaleHair/DefaultFemaleHairAO.png" id="2_51xqg"]
+[ext_resource type="Texture2D" uid="uid://bjmt1cr5dlpyv" path="res://Assets/Characters/FreeTestCharacterAsuna/Textures/DefaultFemaleHair/DefaultFemaleHairAlpha.png" id="3_dxe3r"]
+[ext_resource type="Texture2D" uid="uid://bg7hart3m1tt2" path="res://Assets/Characters/FreeTestCharacterAsuna/Textures/DefaultFemaleHair/DefaultFemaleHairDepth.png" id="3_p21gh"]
+[ext_resource type="Texture2D" uid="uid://btyk47d3sauhe" path="res://Assets/Characters/FreeTestCharacterAsuna/Textures/DefaultFemaleHair/DefaultFemaleHairNormal.png" id="4_7nsvw"]
+[ext_resource type="Texture2D" uid="uid://w01nen4napa2" path="res://Assets/Characters/FreeTestCharacterAsuna/Textures/DefaultFemaleHair/DefaultFemaleHairRoughness.png" id="5_pa41l"]
+
+[resource]
+transparency = 1
+albedo_texture = ExtResource("1_nlgmr")
+roughness_texture = ExtResource("5_pa41l")
+normal_enabled = true
+normal_texture = ExtResource("4_7nsvw")
+ao_enabled = true
+ao_texture = ExtResource("2_51xqg")
+heightmap_enabled = true
+heightmap_texture = ExtResource("3_p21gh")
+detail_enabled = true
+detail_mask = ExtResource("3_dxe3r")
+detail_uv_layer = 1
+detail_albedo = ExtResource("1_nlgmr")

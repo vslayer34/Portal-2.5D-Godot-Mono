@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://6cbxr1axc7w2"]
+[gd_scene load_steps=5 format=3 uid="uid://6cbxr1axc7w2"]
 
 [ext_resource type="PackedScene" uid="uid://dsj3wwj4n5ooj" path="res://Assets/Characters/FreeTestCharacterAsuna/FBX/FreeTestCharacterAsuna/FreeTestCharacterAsuna.fbx" id="1_3n2v7"]
 [ext_resource type="Material" uid="uid://dn4qaxt41i85l" path="res://Assets/Characters/FreeTestCharacterAsuna/Materials/Body/asuna_body_blue_mat.tres" id="2_0mjr3"]
 [ext_resource type="Material" uid="uid://sveip43bfj16" path="res://Assets/Characters/FreeTestCharacterAsuna/Materials/Default Lashes Brow/default_lashes_brow_mat.tres" id="3_lole3"]
+[ext_resource type="Material" uid="uid://b7ysg187ripje" path="res://Assets/Characters/FreeTestCharacterAsuna/Materials/Default Female Hair/default_female_hair_red.tres" id="4_1e5pv"]
 
 [node name="Root Scene" instance=ExtResource("1_3n2v7")]
 
@@ -12,3 +13,6 @@ surface_material_override/2 = ExtResource("3_lole3")
 
 [node name="AsunaBoots" parent="RootNode/Root/Skeleton3D" index="1"]
 surface_material_override/0 = ExtResource("2_0mjr3")
+
+[node name="AsunaHair" parent="RootNode/Root/Skeleton3D" index="4"]
+surface_material_override/0 = ExtResource("4_1e5pv")

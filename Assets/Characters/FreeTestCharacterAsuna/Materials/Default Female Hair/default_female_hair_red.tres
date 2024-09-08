@@ -1,0 +1,22 @@
+[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://b7ysg187ripje"]
+
+[ext_resource type="Texture2D" uid="uid://dvr8yajkellsq" path="res://Assets/Characters/FreeTestCharacterAsuna/Textures/DefaultFemaleHair/DefaultFemaleHairAlbedoRedAlpha.tga" id="1_ed0xr"]
+[ext_resource type="Texture2D" uid="uid://dy5ynvnkwhwbx" path="res://Assets/Characters/FreeTestCharacterAsuna/Textures/DefaultFemaleHair/DefaultFemaleHairAO.png" id="2_51xqg"]
+[ext_resource type="Texture2D" uid="uid://bg7hart3m1tt2" path="res://Assets/Characters/FreeTestCharacterAsuna/Textures/DefaultFemaleHair/DefaultFemaleHairDepth.png" id="3_p21gh"]
+[ext_resource type="Texture2D" uid="uid://btyk47d3sauhe" path="res://Assets/Characters/FreeTestCharacterAsuna/Textures/DefaultFemaleHair/DefaultFemaleHairNormal.png" id="4_7nsvw"]
+[ext_resource type="Texture2D" uid="uid://w01nen4napa2" path="res://Assets/Characters/FreeTestCharacterAsuna/Textures/DefaultFemaleHair/DefaultFemaleHairRoughness.png" id="5_pa41l"]
+
+[resource]
+transparency = 1
+albedo_texture = ExtResource("1_ed0xr")
+roughness_texture = ExtResource("5_pa41l")
+normal_enabled = true
+normal_texture = ExtResource("4_7nsvw")
+ao_enabled = true
+ao_texture = ExtResource("2_51xqg")
+heightmap_enabled = true
+heightmap_texture = ExtResource("3_p21gh")
+detail_enabled = true
+detail_mask = ExtResource("1_ed0xr")
+detail_uv_layer = 1
+detail_albedo = ExtResource("1_ed0xr")
