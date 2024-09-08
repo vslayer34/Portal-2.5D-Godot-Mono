@@ -1,0 +1,24 @@
+[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://dn4qaxt41i85l"]
+
+[ext_resource type="Texture2D" uid="uid://cd6wycn3mj2p7" path="res://Assets/Characters/FreeTestCharacterAsuna/Textures/AsunaBody/Albedo/AsunaBodyGreenAlbedo.png" id="1_yxs76"]
+[ext_resource type="Texture2D" uid="uid://c1vyiuhyngjgi" path="res://Assets/Characters/FreeTestCharacterAsuna/Textures/AsunaBody/AsunaBodyAO.png" id="2_rrsdj"]
+[ext_resource type="Texture2D" uid="uid://b7nsaf1t2br3b" path="res://Assets/Characters/FreeTestCharacterAsuna/Textures/AsunaBody/AsunaBodyIllumination.png" id="3_ulwwk"]
+[ext_resource type="Texture2D" uid="uid://di0rggebtffk1" path="res://Assets/Characters/FreeTestCharacterAsuna/Textures/AsunaBody/AsunaBodyPBRMetalness.tga" id="4_70d0j"]
+[ext_resource type="Texture2D" uid="uid://dctpq2vpq6ss8" path="res://Assets/Characters/FreeTestCharacterAsuna/Textures/AsunaBody/AsunaBodyNormal.png" id="4_n3lom"]
+
+[resource]
+albedo_texture = ExtResource("1_yxs76")
+metallic = 1.0
+metallic_texture = ExtResource("4_70d0j")
+roughness_texture = ExtResource("4_70d0j")
+emission_enabled = true
+emission_texture = ExtResource("3_ulwwk")
+normal_enabled = true
+normal_texture = ExtResource("4_n3lom")
+rim_enabled = true
+rim = 0.5
+clearcoat = 0.26
+clearcoat_roughness = 0.26
+anisotropy = 1.0
+ao_enabled = true
+ao_texture = ExtResource("2_rrsdj")
