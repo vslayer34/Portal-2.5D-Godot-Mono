@@ -28,3 +28,6 @@ surface_material_override/1 = ExtResource("6_40ad5")
 
 [node name="AsunaHair" parent="RootNode/Root/Skeleton3D" index="4"]
 surface_material_override/0 = ExtResource("4_1e5pv")
+
+[node name="AsunaHairTie" parent="RootNode/Root/Skeleton3D" index="5"]
+surface_material_override/0 = ExtResource("3_8qsjh")
