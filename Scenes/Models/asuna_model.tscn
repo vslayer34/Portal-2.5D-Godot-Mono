@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://5iuwixxmx05u"]
+
+[ext_resource type="PackedScene" uid="uid://dsj3wwj4n5ooj" path="res://Assets/Characters/FreeTestCharacterAsuna/FBX/FreeTestCharacterAsuna/FreeTestCharacterAsuna.fbx" id="1_bdb4v"]
+
+[node name="AsunaModel" instance=ExtResource("1_bdb4v")]
