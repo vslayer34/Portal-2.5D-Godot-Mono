@@ -1,7 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://dxpkta83txyqn"]
+[gd_scene load_steps=11 format=3 uid="uid://dxpkta83txyqn"]
 
 [ext_resource type="Script" path="res://Scripts/Characters/EmyController.cs" id="1_h0u17"]
-[ext_resource type="PackedScene" uid="uid://cu6b14cb67ab" path="res://Assets/Characters/Rose/Rose.glb" id="1_xldho"]
 [ext_resource type="Resource" uid="uid://dvabtcoe3ob2c" path="res://Scripts/Resources/shared_events.tres" id="2_xu8bc"]
 [ext_resource type="PackedScene" uid="uid://dt37dq5uact7m" path="res://Scenes/Objects/portal_gun.tscn" id="3_ks0a5"]
 [ext_resource type="PackedScene" uid="uid://cekq0mkyh35fk" path="res://Scenes/UI/aim_cursor.tscn" id="4_cgk50"]
@@ -32,9 +31,6 @@ AimCursor = NodePath("Aim Cursor")
 _speed = 250.0
 _jumpForce = 8.0
 
-[node name="Rose" parent="." instance=ExtResource("1_xldho")]
-visible = false
-
 [node name="Pivot" type="Node3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 
@@ -49,12 +45,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.461472, 0.423927)
 mesh = SubResource("BoxMesh_qw0oa")
 
 [node name="WeaponHandle" type="Node3D" parent="Pivot"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.517277, 1.15734, 0.182441)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.160529, 1.38065, -0.14663)
 
 [node name="Portal Gun" parent="Pivot/WeaponHandle" instance=ExtResource("3_ks0a5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.636706)
 
 [node name="AsunaModel" parent="Pivot" instance=ExtResource("5_mmeug")]
+
+[node name="Skeleton3D" parent="Pivot/AsunaModel/RootNode/Root" index="0"]
+bones/96/scale = Vector3(1, 0.999997, 1)
+bones/114/scale = Vector3(1, 0.999997, 1)
+bones/153/scale = Vector3(1, 1, 0.999998)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -62,3 +63,5 @@ shape = SubResource("CapsuleShape3D_et5l4")
 
 [node name="Aim Cursor" parent="." instance=ExtResource("4_cgk50")]
 top_level = true
+
+[editable path="Pivot/AsunaModel"]

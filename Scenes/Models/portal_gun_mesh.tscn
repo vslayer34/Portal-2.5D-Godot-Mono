@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://5dugfglor3a2" path="res://Assets/Portal Gun/portal gun.glb" id="1_848jn"]
 
 [node name="portal gun" instance=ExtResource("1_848jn")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
 
 [node name="studio_portalgun_reference_smd_mesh_2" parent="." index="1"]
 transparency = 0.6

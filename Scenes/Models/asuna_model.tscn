@@ -1,5 +1,29 @@
-[gd_scene load_steps=2 format=3 uid="uid://5iuwixxmx05u"]
+[gd_scene load_steps=3 format=3 uid="uid://5iuwixxmx05u"]
 
 [ext_resource type="PackedScene" uid="uid://dsj3wwj4n5ooj" path="res://Assets/Characters/FreeTestCharacterAsuna/FBX/FreeTestCharacterAsuna/FreeTestCharacterAsuna.fbx" id="1_bdb4v"]
+[ext_resource type="PackedScene" uid="uid://5dugfglor3a2" path="res://Assets/Portal Gun/portal gun.glb" id="2_m70wy"]
 
 [node name="AsunaModel" instance=ExtResource("1_bdb4v")]
+
+[node name="Skeleton3D" parent="RootNode/Root" index="0"]
+bones/25/scale = Vector3(0.999999, 1, 1)
+bones/63/rotation = Quaternion(-0.588467, 0.318822, 0.653227, -0.354054)
+bones/63/scale = Vector3(1, 1, 0.999993)
+bones/64/rotation = Quaternion(0.465434, 0.052582, 0.125516, 0.874558)
+bones/64/scale = Vector3(0.999999, 1.00001, 0.999978)
+bones/65/scale = Vector3(1, 1, 0.999999)
+bones/96/scale = Vector3(1, 1, 0.999997)
+bones/114/rotation = Quaternion(0.718196, 0.0519048, 0.0536622, 0.691824)
+bones/114/scale = Vector3(0.999992, 0.999997, 1.00001)
+bones/115/scale = Vector3(0.999999, 1.00003, 0.999975)
+bones/119/rotation = Quaternion(-0.0329924, -0.215434, 0.96784, 0.125639)
+bones/119/scale = Vector3(1, 1, 0.999999)
+bones/120/rotation = Quaternion(0.824053, 0.00016239, -0.000224715, 0.566513)
+bones/120/scale = Vector3(1, 1, 0.999996)
+bones/153/position = Vector3(7.31903e-10, 8.00561e-10, -7.95399e-10)
+bones/153/scale = Vector3(1, 0.999991, 1)
+bones/154/scale = Vector3(1, 1, 0.999997)
+
+[node name="portal gun" parent="." index="1" instance=ExtResource("2_m70wy")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.160529, 1.38065, 0.4485)
+visible = false
