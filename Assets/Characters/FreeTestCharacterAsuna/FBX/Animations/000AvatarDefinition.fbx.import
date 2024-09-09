@@ -29,6 +29,33 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={}
+_subresources={
+"materials": {
+"AsunaBody": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Characters/FreeTestCharacterAsuna/Materials/Body/asuna_body_blue_mat.tres"
+},
+"AsunaHead": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Characters/FreeTestCharacterAsuna/Materials/asuna_head_mat.tres"
+},
+"Cornea": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Characters/FreeTestCharacterAsuna/Materials/Eyes/cornea_mat.tres"
+},
+"DefaultFemaleHair": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Characters/FreeTestCharacterAsuna/Materials/Default Female Hair/default_female_hair_red.tres"
+},
+"DefaultLashesBrows": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Characters/FreeTestCharacterAsuna/Materials/Default Lashes Brow/default_lashes_brow_mat.tres"
+},
+"Eyeball": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Characters/FreeTestCharacterAsuna/Materials/Eyes/eyeball_mat_purple.tres"
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1
