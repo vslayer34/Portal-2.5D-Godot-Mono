@@ -24,6 +24,14 @@ bones/153/position = Vector3(7.31903e-10, 8.00561e-10, -7.95399e-10)
 bones/153/scale = Vector3(1, 0.999991, 1)
 bones/154/scale = Vector3(1, 1, 0.999997)
 
+[node name="BoneAttachment3D" type="BoneAttachment3D" parent="RootNode/Root/Skeleton3D" index="6"]
+transform = Transform3D(1, 1.03264e-07, 3.23698e-07, 3.23773e-07, -4.50543e-07, -0.999741, -1.01563e-07, 1.01676, 9.12653e-07, 0.000952102, 0.000257194, 0.000738277)
+bone_name = "Toe1_L"
+bone_idx = 9
+override_pose = true
+use_external_skeleton = true
+external_skeleton = NodePath("..")
+
 [node name="portal gun" parent="." index="1" instance=ExtResource("2_m70wy")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.160529, 1.38065, 0.4485)
 visible = false
