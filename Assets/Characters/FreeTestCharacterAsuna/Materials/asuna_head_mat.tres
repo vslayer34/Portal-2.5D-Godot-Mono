@@ -1,3 +1,32 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://sveip43bfj16"]
+[gd_resource type="StandardMaterial3D" load_steps=9 format=3 uid="uid://b5xib3jiujniy"]
+
+[ext_resource type="Texture2D" uid="uid://cggqxdmfuynvs" path="res://Assets/Characters/FreeTestCharacterAsuna/Textures/AsunaHead/AsunaHeadAO.png" id="1_6qgam"]
+[ext_resource type="Texture2D" uid="uid://drlvt3k5bvjbc" path="res://Assets/Characters/FreeTestCharacterAsuna/Textures/AsunaHead/AsunaHeadDiffuse.png" id="1_udwou"]
+[ext_resource type="Texture2D" uid="uid://bwp3ox5175vha" path="res://Assets/Characters/FreeTestCharacterAsuna/Textures/AsunaHead/AsunaHeadSpecularCoat.png" id="3_5lu5o"]
+[ext_resource type="Texture2D" uid="uid://br0a4e4eqtetk" path="res://Assets/Characters/FreeTestCharacterAsuna/Textures/AsunaHead/AsunaHeadNormal.png" id="3_5urnw"]
+[ext_resource type="Texture2D" uid="uid://bxgsls5a13co7" path="res://Assets/Characters/FreeTestCharacterAsuna/Textures/AsunaHead/AsunaHeadTranslucency.png" id="3_p1c11"]
+[ext_resource type="Texture2D" uid="uid://by2da1um0eo6g" path="res://Assets/Characters/FreeTestCharacterAsuna/Textures/AsunaHead/AsunaHeadPBRMetalness.tga" id="4_pjo5m"]
+[ext_resource type="Texture2D" uid="uid://dej0x3srpan1h" path="res://Assets/Characters/FreeTestCharacterAsuna/Textures/AsunaHead/MicroDetail2Normal.png" id="4_u7gbe"]
+[ext_resource type="Texture2D" uid="uid://1qb4fvd7ywmc" path="res://Assets/Characters/FreeTestCharacterAsuna/Textures/AsunaHead/AsunaHeadSubsurface.png" id="6_lmhck"]
 
 [resource]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("1_udwou")
+metallic_specular = 0.29
+metallic_texture = ExtResource("3_5lu5o")
+roughness_texture = ExtResource("4_pjo5m")
+normal_enabled = true
+normal_texture = ExtResource("3_5urnw")
+ao_enabled = true
+ao_texture = ExtResource("1_6qgam")
+subsurf_scatter_enabled = true
+subsurf_scatter_strength = 0.35
+subsurf_scatter_skin_mode = true
+subsurf_scatter_texture = ExtResource("6_lmhck")
+subsurf_scatter_transmittance_depth = 0.625
+subsurf_scatter_transmittance_boost = 1.0
+backlight_texture = ExtResource("3_p1c11")
+detail_albedo = ExtResource("1_udwou")
+detail_normal = ExtResource("4_u7gbe")
