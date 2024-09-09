@@ -81,7 +81,7 @@ mesh = SubResource("PrismMesh_gv7gf")
 skeleton = NodePath("../..")
 
 [node name="LaunchPoint" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.810205)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.475901)
 
 [node name="PortalFormationParticle" type="GPUParticles3D" parent="LaunchPoint"]
 emitting = false

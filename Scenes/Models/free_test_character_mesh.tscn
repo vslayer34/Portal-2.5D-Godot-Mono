@@ -8,7 +8,7 @@
 [ext_resource type="Material" uid="uid://bnv5q1dc4c5iw" path="res://Assets/Characters/FreeTestCharacterAsuna/Materials/Eyes/eyeball_mat_purple.tres" id="5_cko5c"]
 [ext_resource type="Material" path="res://Assets/Characters/FreeTestCharacterAsuna/Materials/cornea_mat.tres" id="6_40ad5"]
 
-[node name="Root Scene" instance=ExtResource("1_3n2v7")]
+[node name="AsunaModel" instance=ExtResource("1_3n2v7")]
 
 [node name="BodyMesh" parent="RootNode/Root/Skeleton3D" index="0"]
 surface_material_override/0 = ExtResource("2_0mjr3")
