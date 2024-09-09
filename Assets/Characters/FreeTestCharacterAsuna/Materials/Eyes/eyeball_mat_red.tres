@@ -1,0 +1,21 @@
+[gd_resource type="StandardMaterial3D" load_steps=7 format=3 uid="uid://b6ujr2omd1m44"]
+
+[ext_resource type="Texture2D" uid="uid://b514pj71jtkry" path="res://Assets/Characters/FreeTestCharacterAsuna/Textures/DefaultEyes/Eyeball_AlbedoRed.png" id="1_i2yvn"]
+[ext_resource type="Texture2D" uid="uid://cak2dqgqc6b3w" path="res://Assets/Characters/FreeTestCharacterAsuna/Textures/DefaultEyes/Eyeball_AO.png" id="2_rekue"]
+[ext_resource type="Texture2D" uid="uid://ck0k2631a2g4l" path="res://Assets/Characters/FreeTestCharacterAsuna/Textures/DefaultEyes/Eyeball_IlluminationRed.png" id="3_mnrl2"]
+[ext_resource type="Texture2D" uid="uid://c5hrwv1lbemev" path="res://Assets/Characters/FreeTestCharacterAsuna/Textures/DefaultEyes/Eyeball_SpecularBlue.png" id="4_rl6f4"]
+[ext_resource type="Texture2D" uid="uid://dhy2tdl8g3r2p" path="res://Assets/Characters/FreeTestCharacterAsuna/Textures/DefaultEyes/Eyeball_Normal.png" id="5_5o46n"]
+[ext_resource type="Texture2D" uid="uid://i14kpi38kfu" path="res://Assets/Characters/FreeTestCharacterAsuna/Textures/DefaultEyes/Eyeball_Roughness.png" id="6_l6uou"]
+
+[resource]
+transparency = 1
+albedo_texture = ExtResource("1_i2yvn")
+metallic = 1.0
+metallic_texture = ExtResource("4_rl6f4")
+roughness_texture = ExtResource("6_l6uou")
+emission_enabled = true
+emission_texture = ExtResource("3_mnrl2")
+normal_enabled = true
+normal_texture = ExtResource("5_5o46n")
+ao_enabled = true
+ao_texture = ExtResource("2_rekue")
