@@ -53,7 +53,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.636706)
 [node name="AsunaModel" parent="Pivot" instance=ExtResource("5_mmeug")]
 
 [node name="Skeleton3D" parent="Pivot/AsunaModel/RootNode/Root" index="0"]
-bones/96/scale = Vector3(1, 0.999997, 1)
 bones/114/scale = Vector3(1, 0.999997, 1)
 bones/153/scale = Vector3(1, 1, 0.999998)
 
